@@ -13,18 +13,7 @@
          </body>
     </head>
     <selection> 
-          <h2>Formulario de contacto </h2>
-          <form action="" method="post">
-          <input type="text" id="nombre" name="nombre" required>
-           
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-    
-
-
-     <main>
+        <main>
            <h1>Nuestros Servicios</h1>
 
             <section class="servicios">
@@ -45,8 +34,62 @@
                   <h2>Casa Quinta con piscina y Salón de Fiestas </h2>
                   <p>Ideal para celebraciones, bodas y eventos sociales con piscina incluida.</p>
                </article>
-          </section>
-    </main>
+        </section>
+                </main>
+                  <!-- LAYOUT: MAIN + ASIDE (derecha) -->
+                    <div class="layout container">
+                     <main class="main">
+                     <!-- Tu contenido principal -->
+                     <h2>Contenido principal</h2>
+                   <p>Aquí va tu texto, cards de servicios, etc.</p>
+               </main>
+
+                 <!-- ASIDE DE CONTACTO (derecha) -->
+                 <aside class="aside" id="aside">
+                 <h3>Contacto</h3>
+                 <nav class="contact-list">
+            <a class="contact-item" href="https://www.facebook.com/tuPagina" target="_blank" rel="noopener" aria-label="Facebook">
+                <!-- icono FB -->
+                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 11.94 2S2 6.48 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H8.4v-2.91h2.04V9.41c0-2.02 1.2-3.14 3.04-3.14.88 0 1.8.16 1.8.16v1.98h-1.01c-.99 0-1.3.62-1.3 1.26v1.52h2.21l-.35 2.91h-1.86V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
+                    Facebook
+            </a>
+
+            <a class="contact-item" href="https://wa.me/5491112345678?text=Hola%20quisiera%20consultar" target="_blank" rel="noopener" aria-label="WhatsApp">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.5 11.5 0 0 0 2.92 19.87L2 22l2.22-.87A11.5 11.5 0 1 0 20.5 3.5Zm-8.98 17.2a9.7 9.7 0 0 1-4.94-1.35l-.35-.2-2.94 1.16.63-3.08-.2-.32A9.7 9.7 0 1 1 11.52 20.7Zm5.55-7.2c-.3-.15-1.77-.87-2.04-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.46-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.57-.48-.49-.66-.5l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.29.17-1.42-.08-.13-.28-.21-.57-.36Z"/></svg>
+                  WhatsApp
+            </a>
+
+            <a class="contact-item" href="https://cdn-icons-png.flaticon.com/128/2626/2626270.png" target="_blank" rel="noopener" aria-label="Instagram">
+                   svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5ZM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6Z"/></svg>
+                 Instagram
+            </a>
+
+            <a class="contact-item" href="https://www.tiktok.com/@tuUsuario" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8.5a6.5 6.5 0 0 1-4.5-1.76V16a5.5 5.5 0 1 1-5.5-5.5c.17 0 .34 0 .5.03V12a3.5 3.5 0 1 0 3.5 3.5V2h2a6.5 6.5 0 0 0 4 1.5v3Z"/></svg>
+                       TikTok
+             </a>
+            </nav>
+
+    <address class="address">
+      <strong>Oficina Central</strong><br>
+      Av. Siempre Viva 742, Ezeiza, Buenos Aires<br>
+      <a href="https://maps.google.com/?q=Av.+Siempre+Viva+742+Ezeiza" target="_blank" rel="noopener">Ver en Google Maps</a>
+    </address>
+  </aside>
+</div>
+
+<!-- Botón mobile para abrir/ocultar el aside -->
+<button class="aside-toggle" aria-controls="aside" aria-expanded="false">☰ Contacto</button>
+Cambiá los href por tus enlaces reales y el teléfono de WhatsApp (formato: https://wa.me/54911XXXXXXXX).
+
+
+
+  <selection> 
+
+
+
+
+
 </html>
 
 

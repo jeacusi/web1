@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito — Casa Country</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* estilos mínimos para la tabla del carrito */
+    .tabla { width:100%; border-collapse: collapse; }
+    .tabla th, .tabla td { border:1px solid #e6e9ec; padding:10px; text-align:left; }
+    .tabla th { background:#f5f7f6; }
+    .total { text-align:right; font-weight:bold; margin-top:12px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Carrito</h1>
+    <p class="subtitulo">Reservas de servicios</p>
+  </header>
+
+  <nav class="site-nav">
+    <a href="index.html">Inicio</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="carrito.html">Carrito</a>
+  </nav>
+
+  <main class="layout">
+    <section class="principales">
+      <h2>Resumen</h2>
+
+      <div class="card">
+        <table class="tabla">
+          <thead>
+            <tr>
+              <th>Servicio</th>
+              <th>Detalle</th>
+              <th>Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Casa con Piscina</td>
+              <td>Familiar, 5 ambientes</td>
+              <td>$80.000</td>
+            </tr>
+            <tr>
+              <td>Casa con Tenis</td>
+              <td>Área deportiva</td>
+              <td>$120.000</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="total">Total: $200.000</p>
+        <button>Confirmar reserva</button>
+      </div>
+    </section>
+
+    <aside class="adicionales">
+      <h2>Ayuda</h2>
+      <div class="addon">
+        <h3>¿Cómo reservo?</h3>
+        <p>Revisá el resumen y presioná “Confirmar reserva”.</p>
+      </div>
+      <div class="addon">
+        <h3>Medios de pago</h3>
+        <p>Transferencia y tarjetas.</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 Casa Country — Ezeiza</small>
+  </footer>
+
+</body>
+</html>
