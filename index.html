@@ -1,64 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
- <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Estadía Ezeiza</title>
-    
-         </head>
-    <body>
-       <div class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estadía Ezeiza</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="page">
       <header class="page__header">
+        <a class="reservation-cart" href="#reserva" aria-label="Abrir carrito de reserva">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M6.5 6h-.91a1.5 1.5 0 1 1 0-3H7a1 1 0 0 1 .97.757L8.4 6H20a1 1 0 0 1 .96 1.274l-1.8 6.3A2 2 0 0 1 17.24 15H9.32l-.3 1.09a1 1 0 0 1-.96.73H5.5a1.5 1.5 0 1 1 0-2.999h1.79l1.85-6.74L8.61 6H6.5Zm3.2 7h7.54a.5.5 0 0 0 .48-.35L19.3 8H9.78l-.08.31L9.7 9l-.89 4Z"
+              fill="currentColor"
+            />
+            <circle cx="8" cy="19" r="1" fill="currentColor" />
+            <circle cx="17" cy="19" r="1" fill="currentColor" />
+          </svg>
+          <span>Carrito</span>
+        </a>
         <h1>Estadía Ezeiza</h1>
         <p>Alquiler de casas quinta con experiencias inolvidables</p>
-       </header>
-      </head>
-       <main class="page__main">
+      </header>
+
+      <main class="page__main">
         <section class="intro">
-          <h2>Bienvenidos</h2>
-          <p>
-            Descubrí un refugio natural a minutos de la ciudad. Nuestras casas
-            quinta ofrecen comodidades modernas en entornos verdes para
-            disfrutar en familia, con amigos o celebrar tus eventos especiales.
-          </p>
+          <div class="intro__content">
+            <h2>Bienvenidos</h2>
+            <p>
+              Descubrí un refugio natural a minutos de la ciudad. Nuestras
+              casas quinta combinan comodidades modernas con entornos verdes
+              para disfrutar en familia, con amigos o celebrar tus eventos
+              especiales.
+            </p>
+            <ul class="intro__list">
+              <li>Ambientes amplios y luminosos rodeados de naturaleza.</li>
+              <li>Paquetes personalizados para escapadas, eventos y retiros.</li>
+              <li>Equipo local dedicado para acompañarte durante la estadía.</li>
+            </ul>
+          </div>
           <figure class="intro__media">
             <img
               src="img/ezeiza-maraton-aniversario-2jpg.webp"
               alt="Piscina exterior en una casa quinta de Ezeiza"
               loading="lazy"
             />
-             </figure>
+          </figure>
         </section>
+
         <section class="services">
-          <h2>Nuestros Servicios</h2>
-          <article class="service-card">
-            <h3>Casa Quinta con Piscina Familiar</h3>
+          <div class="section-heading">
+            <h2>Nuestros Servicios</h2>
             <p>
-              Piscina principal climatizada y sector seguro para peques, quincho
-              equipado y áreas verdes para relajarse.
+              Elegí la opción que mejor se adapte a tu experiencia ideal: una
+              jornada de relax, un encuentro deportivo o una celebración
+              inolvidable.
             </p>
-          </article>
-          <article class="service-card">
-            <h3>Casa Quinta Deportiva</h3>
-            <p>
-              Cancha de tenis y fútbol 5, pileta semiolímpica y gimnasio
-              equipado para grupos deportivos o retiros corporativos.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3>Casa Quinta con Salón de Fiestas</h3>
-            <p>
-              Espacio ideal para bodas y celebraciones, con salón climatizado,
-              pista de baile y servicio de catering opcional.
-            </p>
-          </article>
+          </div>
+          <div class="services__grid">
+            <article class="service-card">
+              <h3>Casa Quinta con Piscina Familiar</h3>
+              <p>
+                Piscina principal climatizada y sector seguro para peques,
+                quincho equipado y áreas verdes para relajarse.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Casa Quinta Deportiva</h3>
+              <p>
+                Cancha de tenis y fútbol 5, pileta semiolímpica y gimnasio
+                equipado para grupos deportivos o retiros corporativos.
+              </p>
+            </article>
+            <article class="service-card">
+              <h3>Casa Quinta con Salón de Fiestas</h3>
+              <p>
+                Espacio ideal para bodas y celebraciones, con salón
+                climatizado, pista de baile y servicio de catering opcional.
+              </p>
+            </article>
+          </div>
         </section>
       </main>
 
+      <aside id="reserva" class="page__aside">
+        <h2>Reservá tu visita</h2>
+        <p>Completá el formulario y coordinamos una visita guiada.</p>
+        <form class="contact-form" action="#" method="post">
+          <label class="sr-only" for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Nombre" required />
 
+          <label class="sr-only" for="email">Correo electrónico</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Correo electrónico"
+            required
+          />
 
-        <script src="js/main.js"></script>
-    </body>
+          <label class="sr-only" for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Contanos qué tipo de evento querés organizar"
+            rows="4"
+            required
+          ></textarea>
+
+          <button type="submit">Enviar consulta</button>
+        </form>
+      </aside>
+
+      <footer class="page__footer">
+        <p>
+          &copy; <time datetime="2024">2024</time> Estadía Ezeiza. Todos los
+          derechos reservados.
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
-
-       
