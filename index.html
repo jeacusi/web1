@@ -1,186 +1,246 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estadía Ezeiza</title>
+    <title>Vení a Ezeiza a relajarte de la ciudad</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="layout-centered">
-    <div class="page">
-      <header class="page__header">
-        <a class="reservation-cart" href="#reserva" aria-label="Abrir carrito de reserva">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path
-              d="M6.5 6h-.91a1.5 1.5 0 1 1 0-3H7a1 1 0 0 1 .97.757L8.4 6H20a1 1 0 0 1 .96 1.274l-1.8 6.3A2 2 0 0 1 17.24 15H9.32l-.3 1.09a1 1 0 0 1-.96.73H5.5a1.5 1.5 0 1 1 0-2.999h1.79l1.85-6.74L8.61 6H6.5Zm3.2 7h7.54a.5.5 0 0 0 .48-.35L19.3 8H9.78l-.08.31L9.7 9l-.89 4Z"
-              fill="currentColor"
-            />
-            <circle cx="8" cy="19" r="1" fill="currentColor" />
-            <circle cx="17" cy="19" r="1" fill="currentColor" />
-          </svg>
-          <span>Carrito</span>
-        </a>
-        <h1>Estadía Ezeiza</h1>
-        <p>Alquiler de casas quinta con experiencias inolvidables</p>
-      </header>
+  <body>
+    <header class="site-header">
+      <div class="site-header__bar">
+        <span class="site-logo">Estadía Ezeiza</span>
+        <nav class="site-menu" aria-label="Navegación principal">
+          <a href="#experiencias">Experiencias</a>
+          <a href="#amenities">Amenities</a>
+          <a href="Contacto.html">Contacto</a>
+          <a class="site-menu__cta" href="Carrito.html">Carrito</a>
+        </nav>
+      </div>
 
-      <main class="page__main">
-        <section class="intro">
-          <div class="intro__content">
-            <h2>Bienvenidos</h2>
-            <p>
-              Descubrí un refugio natural a minutos de la ciudad. Nuestras
-              casas quinta combinan comodidades modernas con entornos verdes
-              para disfrutar en familia, con amigos o celebrar tus eventos
-              especiales.
-            </p>
-            <ul class="intro__list">
-              <li>Ambientes amplios y luminosos rodeados de naturaleza.</li>
-              <li>Paquetes personalizados para escapadas, eventos y retiros.</li>
-              <li>Equipo local dedicado para acompañarte durante la estadía.</li>
-            </ul>
+      <div class="hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Servicio de alquiler de casas quintas para familias</p>
+          <h1>Vení a Ezeiza a relajarte de la ciudad</h1>
+          <p class="hero__lead">
+            Viví una estadía rodeada de verde, con espacios diseñados para el relax,
+            celebraciones íntimas o encuentros corporativos memorables.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#reserva">Agendar visita</a>
+            <a class="btn btn--ghost" href="#experiencias">Ver experiencias</a>
           </div>
-          <figure class="intro__media">
-            <img
-              src="img/ezeiza-maraton-aniversario-2jpg.webp"
-              alt="Piscina exterior en una casa quinta de Ezeiza"
-              loading="lazy"
-            />
-          </figure>
-        </section>
-
-        <section class="services">
-          <div class="section-heading">
-            <h2>Nuestros Servicios</h2>
-            <p>
-              Elegí la opción que mejor se adapte a tu experiencia ideal: una
-              jornada de relax, un encuentro deportivo o una celebración
-              inolvidable.
-            </p>
-          </div>
-          <div class="services__grid">
-            <article class="service-card">
-              <figure class="service-card__media">
-                <img src="img/quinta-verde.jpg" alt="Casa quinta rodeada de un parque verde" loading="lazy" />
-              </figure>
-              <div class="service-card__body">
-                <h3>Casa Quinta Bosque Serenity</h3>
-                <p>
-                  Amplios jardines arbolados, piscina climatizada y livings al aire libre para
-                  una escapada de relax en contacto con la naturaleza.
-                </p>
-              </div>
-              <button class="service-card__button" type="button">Agregar al carrito</button>
-            </article>
-
-            <article class="service-card">
-              <figure class="service-card__media">
-                <img src="img/quinta-tenis.jpg" alt="Casa quinta con cancha de tenis" loading="lazy" />
-              </figure>
-              <div class="service-card__body">
-                <h3>Casa Quinta Club Deportivo</h3>
-                <p>
-                  Cancha de tenis profesional, campo de fútbol 5 y gimnasio equipado para
-                  entrenamientos intensivos o retiros corporativos.
-                </p>
-              </div>
-              <button class="service-card__button" type="button">Agregar al carrito</button>
-            </article>
-
-            <article class="service-card">
-              <figure class="service-card__media">
-                <img src="img/cumpleaños.jpg" alt="Decoración de fiesta de cumpleaños junto a la piscina" loading="lazy" />
-              </figure>
-              <div class="service-card__body">
-                <h3>Casa Quinta Celebraciones Premium</h3>
-                <p>
-                  Salón climatizado, pista de baile iluminada y sonido profesional para bodas,
-                  cumpleaños y eventos sociales inolvidables.
-                </p>
-              </div>
-              <button class="service-card__button" type="button">Agregar al carrito</button>
-            </article>
-
-            <article class="service-card">
-              <figure class="service-card__media">
-                <img src="img/evento-empresa.jpg" alt="Evento corporativo en una casa quinta" loading="lazy" />
-              </figure>
-              <div class="service-card__body">
-                <h3>Casa Quinta Business Hub</h3>
-                <p>
-                  Salas de reuniones equipadas, servicio de coffee break y espacios al aire libre
-                  pensados para presentaciones y workshops.
-                </p>
-              </div>
-              <button class="service-card__button" type="button">Agregar al carrito</button>
-            </article>
-
-            <article class="service-card">
-              <figure class="service-card__media">
-                <img src="img/catering.jpg" alt="Servicio de catering servido al aire libre" loading="lazy" />
-              </figure>
-              <div class="service-card__body">
-                <h3>Casa Quinta Gourmet Experience</h3>
-                <p>
-                  Chef privado, maridaje de vinos y estaciones temáticas para degustar platos
-                  gourmet sin salir del entorno natural.
-                </p>
-              </div>
-              <button class="service-card__button" type="button">Agregar al carrito</button>
-            </article>
-
-            <article class="service-card">
-              <figure class="service-card__media">
-                <img src="img/quinta-flores.jpg" alt="Casa quinta con jardines floridos" loading="lazy" />
-              </figure>
-              <div class="service-card__body">
-                <h3>Casa Quinta Garden Retreat</h3>
-                <p>
-                  Caminos floridos, huerta orgánica y espacios zen para retiros de bienestar,
-                  sesiones de yoga y experiencias mindfulness.
-                </p>
-              </div>
-              <button class="service-card__button" type="button">Agregar al carrito</button>
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <aside id="reserva" class="page__aside">
-        <h2>Reservá tu visita</h2>
-        <p>Completá el formulario y coordinamos una visita guiada.</p>
-        <form class="contact-form" action="#" method="post">
-          <label class="sr-only" for="nombre">Nombre</label>
-          <input id="nombre" name="nombre" type="text" placeholder="Nombre" required />
-
-          <label class="sr-only" for="email">Correo electrónico</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Correo electrónico"
-            required
+          <ul class="hero__highlights">
+            <li>Casas equipadas para estadías familiares sin preocupaciones.</li>
+            <li>Opciones de entretenimiento para todas las edades.</li>
+            <li>Atención personalizada desde la reserva hasta el check-out.</li>
+          </ul>
+        </div>
+        <figure class="hero__media">
+          <img
+            src="img/ezeiza-maraton-aniversario-2jpg.webp"
+            alt="Piscina exterior rodeada de naturaleza"
+            loading="lazy"
           />
+        </figure>
+      </div>
+    </header>
 
-          <label class="sr-only" for="mensaje">Mensaje</label>
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            placeholder="Contanos qué tipo de evento querés organizar"
-            rows="4"
-            required
-          ></textarea>
+    <main>
+      <section class="surface features" id="amenities">
+        <div class="section-heading">
+          <h2>Servicios pensados para tu familia</h2>
+          <p>
+            Cada casa quinta está preparada con comodidad, seguridad y propuestas recreativas para
+            que disfrutes de días inolvidables a minutos de la ciudad.
+          </p>
+        </div>
+        <div class="features__grid">
+          <article class="feature-card">
+            <h3>Asesoría personalizada</h3>
+            <p>
+              Te guiamos para elegir la casa quinta ideal según la cantidad de personas, edades y
+              actividades que quieras disfrutar.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Equipamiento incluido</h3>
+            <p>
+              Ropa de cama, vajilla completa, climatización y Wi-Fi para que tu estadía sea cómoda
+              y práctica.
+            </p>
+          </article>
+          <article class="feature-card">
+            <h3>Actividades y recreación</h3>
+            <p>
+              Juegos al aire libre, senderos arbolados y espacios cubiertos para seguir disfrutando
+              sin importar el clima.
+            </p>
+          </article>
+        </div>
+      </section>
 
-          <button type="submit">Enviar consulta</button>
-        </form>
-      </aside>
+      <section class="surface experiences" id="experiencias">
+        <div class="section-heading">
+          <h2>Seis estilos de casa quinta para elegir</h2>
+          <p>
+            Descubrí opciones pensadas para distintos gustos y necesidades: todas cuentan con
+            amplios jardines, seguridad y fácil acceso desde Buenos Aires.
+          </p>
+        </div>
+        <div class="experiences__grid">
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/quinta-verde.jpg" alt="Casa quinta rodeada de un parque verde" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta Clásica</h3>
+              <p>
+                Arquitectura tradicional con techos inclinados, paredes de ladrillo visto y un
+                jardín amplio ideal para juegos en familia.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
 
-      <footer class="page__footer">
-        <p>
-          &copy; <time datetime="2024">2024</time> Estadía Ezeiza. Todos los
-          derechos reservados.
-        </p>
-      </footer>
-    </div>
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/quinta-tenis.jpg" alt="Casa quinta con cancha de tenis" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta Moderna</h3>
+              <p>
+                Diseño vanguardista con líneas limpias, grandes ventanales y materiales innovadores
+                como vidrio y metal que llenan de luz los ambientes.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img
+                src="img/cumpleaños.jpg"
+                alt="Decoración de fiesta de cumpleaños junto a la piscina"
+                loading="lazy"
+              />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta Rústica</h3>
+              <p>
+                Ambientes revestidos en madera y piedra, con hogar a leña y un clima acogedor que
+                invita a compartir charlas eternas.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/evento-empresa.jpg" alt="Evento corporativo en una casa quinta" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta con Piscina</h3>
+              <p>
+                Piscina protagonista con solárium y livings exteriores para refrescarse durante todo
+                el día y compartir momentos inolvidables.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/quinta-flores.jpg" alt="Quincho equipado para reuniones familiares" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta con Quincho/Parrilla</h3>
+              <p>
+                Espacio dedicado a los asados con parrilla completa, barra y quincho cerrado para
+                festejar sin importar el clima.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/quinta-verde.jpg" alt="Casa quinta de ladrillo a la vista rodeada de árboles" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta de Ladrillo a la Vista</h3>
+              <p>
+                Fachada clásica sin revestimiento que combina elegancia y calidez, con galerías y
+                galerones ideales para reuniones familiares.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="surface gallery">
+        <div class="section-heading">
+          <h2>Momentos que inspiran</h2>
+          <p>Escenarios naturales, detalles de autor y experiencias diseñadas a medida.</p>
+        </div>
+        <div class="gallery__grid">
+          <figure class="gallery__item">
+            <img src="img/catering.jpg" alt="Servicio de catering servido al aire libre" loading="lazy" />
+            <figcaption>Catering de autor con productos frescos y locales.</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/quinta-flores.jpg" alt="Casa quinta con jardines floridos" loading="lazy" />
+            <figcaption>Jardines floridos con rincones perfectos para relajarse.</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/quinta-verde.jpg" alt="Vista aérea de una casa quinta" loading="lazy" />
+            <figcaption>Áreas exteriores listas para actividades recreativas.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="surface cta" id="reserva">
+  <div class="section-heading">
+    <h2>Coordiná una visita guiada</h2>
+    <p>Contanos cómo imaginás tu evento y armamos una propuesta a tu medida.</p>
+  </div>
+
+  <form class="contact-form contact-form--table" action="#" method="post">
+    <table class="form-table" role="presentation" aria-label="Formulario de contacto">
+      <tbody>
+        <tr>
+          <th scope="row"><label for="nombre">Nombre</label></th>
+          <td><input id="nombre" name="nombre" type="text" placeholder="Nombre" required></td>
+          <th scope="row"><label for="email">Correo electrónico</label></th>
+          <td><input id="email" name="email" type="email" placeholder="Correo electrónico" required></td>
+        </tr>
+        <tr>
+          <th scope="row" class="align-top"><label for="telefono">Teléfono</label></th>
+          <td><input id="telefono" name="telefono" type="tel" placeholder="Opcional"></td>
+          <th scope="row"><label for="fecha">Fecha tentativa</label></th>
+          <td><input id="fecha" name="fecha" type="date"></td>
+        </tr>
+        <tr>
+          <th scope="row" class="align-top"><label for="mensaje">Mensaje</label></th>
+          <td colspan="3">
+            <textarea id="mensaje" name="mensaje" rows="4"
+              placeholder="Contanos qué tipo de evento querés organizar" required></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4" class="table-actions">
+            <button class="btn btn--primary" type="submit">Enviar consulta</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <time datetime="2024">2024</time> Estadía Ezeiza. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
