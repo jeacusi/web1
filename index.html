@@ -201,42 +201,29 @@
       </section>
 
       <section class="surface cta" id="reserva">
-  <div class="section-heading">
-    <h2>Coordiná una visita guiada</h2>
-    <p>Contanos cómo imaginás tu evento y armamos una propuesta a tu medida.</p>
-  </div>
+        <div class="section-heading">
+          <h2>Coordiná una visita guiada</h2>
+          <p>Contanos cómo imaginás tu evento y armamos una propuesta a tu medida.</p>
+        </div>
+        <form class="contact-form" action="#" method="post">
+          <label class="sr-only" for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Nombre" required />
 
-  <form class="contact-form contact-form--table" action="#" method="post">
-    <table class="form-table" role="presentation" aria-label="Formulario de contacto">
-      <tbody>
-        <tr>
-          <th scope="row"><label for="nombre">Nombre</label></th>
-          <td><input id="nombre" name="nombre" type="text" placeholder="Nombre" required></td>
-          <th scope="row"><label for="email">Correo electrónico</label></th>
-          <td><input id="email" name="email" type="email" placeholder="Correo electrónico" required></td>
-        </tr>
-        <tr>
-          <th scope="row" class="align-top"><label for="telefono">Teléfono</label></th>
-          <td><input id="telefono" name="telefono" type="tel" placeholder="Opcional"></td>
-          <th scope="row"><label for="fecha">Fecha tentativa</label></th>
-          <td><input id="fecha" name="fecha" type="date"></td>
-        </tr>
-        <tr>
-          <th scope="row" class="align-top"><label for="mensaje">Mensaje</label></th>
-          <td colspan="3">
-            <textarea id="mensaje" name="mensaje" rows="4"
-              placeholder="Contanos qué tipo de evento querés organizar" required></textarea>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="4" class="table-actions">
-            <button class="btn btn--primary" type="submit">Enviar consulta</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </form>
-</section>
+          <label class="sr-only" for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="Correo electrónico" required />
+
+          <label class="sr-only" for="mensaje">Mensaje</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Contanos qué tipo de evento querés organizar"
+            rows="4"
+            required
+          ></textarea>
+
+          <button class="btn btn--primary" type="submit">Enviar consulta</button>
+        </form>
+      </section>
     </main>
 
     <footer class="site-footer">
