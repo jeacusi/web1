@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contactos - Reserva Casa Quinta</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ===== Encabezado ===== -->
+  <header class="header">
+    <h1>Formulario de Contacto</h1>
+    <p>Completá tus datos para que podamos reservarte una casa quinta</p>
+  </header>
+
+  <!-- ===== Formulario de Contactos ===== -->
+  <section class="surface">
+    <form action="#" method="post">
+      <table class="form-table">
+        <tbody>
+          <tr>
+            <th><label for="nombre">Nombre</label></th>
+            <td><input type="text" id="nombre" name="nombre" required></td>
+          </tr>
+          <tr>
+            <th><label for="apellido">Apellido</label></th>
+            <td><input type="text" id="apellido" name="apellido" required></td>
+          </tr>
+          <tr>
+            <th><label for="dni">DNI</label></th>
+            <td><input type="text" id="dni" name="dni" required></td>
+          </tr>
+          <tr>
+            <th><label for="telefono">Teléfono</label></th>
+            <td><input type="tel" id="telefono" name="telefono" required></td>
+          </tr>
+          <tr>
+            <th><label for="email">Correo electrónico</label></th>
+            <td><input type="email" id="email" name="email" required></td>
+          </tr>
+          <tr>
+            <th><label for="direccion">Dirección</label></th>
+            <td><input type="text" id="direccion" name="direccion"></td>
+          </tr>
+          <tr>
+            <th><label for="fecha">Fecha de reserva</label></th>
+            <td><input type="date" id="fecha" name="fecha" required></td>
+          </tr>
+          <tr>
+            <th><label for="personas">Cantidad de personas</label></th>
+            <td><input type="number" id="personas" name="personas" min="1" required></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="table-actions">
+              <button type="submit" class="btn--primary">Enviar Reserva</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 Estadía Ezeiza - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

@@ -663,3 +663,69 @@ main {
     border-radius: 16px;
   }
 }
+/* ===== Reset ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f5f7fa; color: #243447; }
+
+/* ===== Header ===== */
+.header {
+  background: #4caf93;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.header p { margin-top: 8px; }
+
+/* ===== Contenedor ===== */
+.surface {
+  background: white;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+  width: 90%;
+  max-width: 600px;
+}
+
+/* ===== Tabla ===== */
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.form-table th, .form-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+.form-table th {
+  text-align: left;
+  background: #f8fafb;
+  width: 220px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.table-actions { text-align: center; padding: 20px; }
+
+/* ===== Botón ===== */
+.btn--primary {
+  background: #4caf93;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn--primary:hover { background: #3d8a78; }
+
+/* ===== Footer ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #243447;
+  color: white;
+  margin-top: 40px;
+}
