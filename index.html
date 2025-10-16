@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vení a Ezeiza a relajarte de la ciudad</title>
     <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const t = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
+        if (t) {
+          e.preventDefault();
+          t.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
   <body>
     <header class="site-header">
       <div class="site-header__bar">
@@ -37,11 +53,7 @@
           </ul>
         </div>
         <figure class="hero__media">
-          <img
-            src="img/ezeiza-maraton-aniversario-2jpg.webp"
-            alt="Piscina exterior rodeada de naturaleza"
-            loading="lazy"
-          />
+          <img src="img/ezeiza-maraton-aniversario-2jpg.webp" alt="Piscina exterior rodeada de naturaleza" loading="lazy" />
         </figure>
       </div>
     </header>
@@ -82,13 +94,14 @@
 
       <section class="surface experiences" id="experiencias">
         <div class="section-heading">
-          <h2>Seis estilos de casa quinta para elegir</h2>
+          <h2>Diez estilos de casa quinta para elegir </h2>
           <p>
             Descubrí opciones pensadas para distintos gustos y necesidades: todas cuentan con
             amplios jardines, seguridad y fácil acceso desde Buenos Aires.
           </p>
         </div>
         <div class="experiences__grid">
+          
           <article class="experience-card">
             <figure class="experience-card__media">
               <img src="img/quinta-verde.jpg" alt="Casa quinta rodeada de un parque verde" loading="lazy" />
@@ -119,11 +132,7 @@
 
           <article class="experience-card">
             <figure class="experience-card__media">
-              <img
-                src="img/cumpleaños.jpg"
-                alt="Decoración de fiesta de cumpleaños junto a la piscina"
-                loading="lazy"
-              />
+              <img src="img/cumpleaños.jpg" alt="Decoración de fiesta de cumpleaños junto a la piscina" loading="lazy" />
             </figure>
             <div class="experience-card__body">
               <h3>Casa Quinta Rústica</h3>
@@ -154,7 +163,7 @@
               <img src="img/quinta-flores.jpg" alt="Quincho equipado para reuniones familiares" loading="lazy" />
             </figure>
             <div class="experience-card__body">
-              <h3>Casa Quinta con Quincho/Parrilla</h3>
+              <h3>Casa Quinta con Quincho</h3>
               <p>
                 Espacio dedicado a los asados con parrilla completa, barra y quincho cerrado para
                 festejar sin importar el clima.
@@ -168,7 +177,7 @@
               <img src="img/quinta-verde.jpg" alt="Casa quinta de ladrillo a la vista rodeada de árboles" loading="lazy" />
             </figure>
             <div class="experience-card__body">
-              <h3>Casa Quinta de Ladrillo a la Vista</h3>
+              <h3>Casa Quinta de Ladrillo</h3>
               <p>
                 Fachada clásica sin revestimiento que combina elegancia y calidez, con galerías y
                 galerones ideales para reuniones familiares.
@@ -176,6 +185,59 @@
             </div>
             <button class="btn btn--secondary" type="button">Agregar al carrito</button>
           </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/quinta-tenis.jpg" alt="Estudio de artista con grandes ventanales" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Retiro del Artista 🎨</h3>
+              <p>
+                Un espacio de tranquilidad con luz natural, ideal para la inspiración. Incluye un pequeño estudio para pintura o escritura.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/quinta-flores.jpg" alt="Huerta orgánica y paneles solares" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Casa Quinta Eco-Friendly ♻️</h3>
+              <p>
+                Comprometida con el medio ambiente, esta quinta ofrece una huerta orgánica y cuenta con sistemas de energía renovable.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/evento-empresa.jpg" alt="Cancha de deportes y gimnasio al aire libre" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>Quinta Deportiva ⚽</h3>
+              <p>
+                Perfecta para equipos o familias activas. Incluye cancha de fútbol 5, red de vóley y un gimnasio al aire libre equipado.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-card__media">
+              <img src="img/cumpleaños.jpg" alt="Terraza amplia con vistas al atardecer" loading="lazy" />
+            </figure>
+            <div class="experience-card__body">
+              <h3>La Gran Terraza 🌅</h3>
+              <p>
+                Diseño minimalista centrado en el exterior. Su principal atractivo es una enorme terraza con barra y vistas panorámicas.
+              </p>
+            </div>
+            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+          </article>
+
         </div>
       </section>
 
