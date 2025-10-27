@@ -1,0 +1,60 @@
+[
+    {
+      "id": 1,
+      "titulo": "Casa Quinta Clásica",
+      "descripcion": "Arquitectura tradicional con techos inclinados, paredes de ladrillo visto y un jardín amplio ideal para juegos en familia.",
+      "imagen": "./img/quinta-verde.jpg"
+    },
+    {
+      "id": 2,
+      "titulo": "Casa Quinta Moderna",
+      "descripcion": "Diseño vanguardista con líneas limpias, grandes ventanales y materiales innovadores como vidrio y metal que llenan de luz los ambientes.",
+      "imagen": "./img/quinta-tenis.jpg"
+    },
+    {
+      "id": 3,
+      "titulo": "Casa Quinta Rústica",
+      "descripcion": "Ambientes revestidos en madera y piedra, con hogar a leña y un clima acogedor que invita a compartir charlas eternas.",
+      "imagen": "./img/cumpleaños.jpg"
+    },
+    {
+      "id": 4,
+      "titulo": "Casa Quinta con Piscina",
+      "descripcion": "Piscina protagonista con solárium y livings exteriores para refrescarse durante todo el día y compartir momentos inolvidables.",
+      "imagen": "./img/evento-empresa.jpg"
+    },
+    {
+      "id": 5,
+      "titulo": "Casa Quinta con Quincho",
+      "descripcion": "Espacio dedicado a los asados con parrilla completa, barra y quincho cerrado para festejar sin importar el clima.",
+      "imagen": "./img/quinta-flores.jpg"
+    },
+    {
+      "id": 6,
+      "titulo": "Casa Quinta de Ladrillo",
+      "descripcion": "Fachada clásica sin revestimiento que combina elegancia y calidez, con galerías y galerones ideales para reuniones familiares.",
+      "imagen": "./img/quinta-verde.jpg"
+    },
+    {
+      "id": 7,
+      "titulo": "Retiro del Artista 🎨",
+      "descripcion": "Un espacio de tranquilidad con luz natural, ideal para la inspiración. Incluye un pequeño estudio para pintura o escritura.",
+      "imagen": "./img/quinta-tenis.jpg"
+    },
+    {
+      "id": 8,
+      "titulo": "Casa Quinta Eco-Friendly ♻️",
+      "descripcion": "Comprometida con el medio ambiente, esta quinta ofrece una huerta orgánica y cuenta con sistemas de energía renovable.",
+      "imagen": "./img/quinta-flores.jpg"
+    },
+    {
+      "id": 9,
+      "titulo": "Quinta Deportiva ⚽",
+      "descripcion": "Perfecta para equipos o familias activas. Incluye cancha de fútbol 5, red de vóley y un gimnasio al aire libre equipado.",
+      "imagen": "./img/evento-empresa.jpg"
+    },
+    {
+      "id": 10,
+      "titulo": "La Gran Terraza 🌅",
+      "descripcion": "Diseño minimalista centrado en el exterior. Su principal atractivo es una enorme terraza con barra y vistas panorámicas.",
+      "imagen": "./img/cumpleaños.jpg"

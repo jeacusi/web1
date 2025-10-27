@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vení a Ezeiza a relajarte de la ciudad</title>
     <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -23,40 +22,72 @@
   </script>
 
   <body>
-    <header class="site-header">
-      <div class="site-header__bar">
-        <span class="site-logo">Estadía Ezeiza</span>
-        <nav class="site-menu" aria-label="Navegación principal">
-          <a href="#experiencias">Experiencias</a>
-          <a href="#amenities">Amenities</a>
-          <a href="Contacto.html">Contacto</a>
-          <a class="site-menu__cta" href="Carrito.html">Carrito</a>
-        </nav>
-      </div>
+   <header class="site-header">
+  <div class="site-header__bar">
+    <span class="site-logo">Estadía Ezeiza</span>
 
-      <div class="hero">
-        <div class="hero__content">
-          <p class="hero__eyebrow">Servicio de alquiler de casas quintas para familias</p>
-          <h1>Vení a Ezeiza a relajarte de la ciudad</h1>
-          <p class="hero__lead">
-            Viví una estadía rodeada de verde, con espacios diseñados para el relax,
-            celebraciones íntimas o encuentros corporativos memorables.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#reserva">Agendar visita</a>
-            <a class="btn btn--ghost" href="#experiencias">Ver experiencias</a>
-          </div>
-          <ul class="hero__highlights">
-            <li>Casas equipadas para estadías familiares sin preocupaciones.</li>
-            <li>Opciones de entretenimiento para todas las edades.</li>
-            <li>Atención personalizada desde la reserva hasta el check-out.</li>
-          </ul>
-        </div>
-        <figure class="hero__media">
-          <img src="img/ezeiza-maraton-aniversario-2jpg.webp" alt="Piscina exterior rodeada de naturaleza" loading="lazy" />
-        </figure>
+    <!-- 🔍 Campo de búsqueda con ícono de lupa -->
+    <form class="nav-search" action="#" method="get">
+      <input
+        type="text"
+        class="nav-search-input"
+        id="cb1-edit"
+        name="as_word"
+        placeholder="Buscar productos, marcas y más…"
+        maxlength="120"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+        autocomplete="off"
+        aria-activedescendant=""
+        aria-controls="sb-suggestions-1"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        role="combobox"
+      />
+      <button type="submit" class="nav-search-btn" aria-label="Buscar">
+        <!-- Ícono SVG de lupa -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="white" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="8" cy="8" r="6"></circle>
+          <line x1="14" y1="14" x2="20" y2="20"></line>
+        </svg>
+      </button>
+    </form>
+
+    <!-- 🔗 Menú principal -->
+    <nav class="site-menu" aria-label="Navegación principal">
+      <a href="#experiencias">aquieres</a>
+      <a href="#amenities">Servicios</a>
+      <a href="Contacto.html">Contacto</a>
+      <a class="site-menu__cta" href="Carrito.html">Carrito</a>
+    </nav>
+  </div>
+
+  <div class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Servicio de alquiler de casas quintas para familias</p>
+      <h1>Vení a Ezeiza a relajarte de la ciudad</h1>
+      <p class="hero__lead">
+        Viví una estadía rodeada de verde, con espacios diseñados para el relax,
+        celebraciones íntimas o encuentros corporativos memorables.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#reserva">Agendar visita</a>
+        <a class="btn btn--ghost" href="#experiencias">Ver experiencias</a>
       </div>
-    </header>
+      <ul class="hero__highlights">
+        <li>Casas equipadas para estadías familiares sin preocupaciones.</li>
+        <li>Opciones de entretenimiento para todas las edades.</li>
+        <li>Atención personalizada desde la reserva hasta el check-out.</li>
+      </ul>
+     </div>
+      <figure class="hero__media">
+      <img src="img/ezeiza-maraton-aniversario-2jpg.webp" alt="Piscina exterior rodeada de naturaleza" loading="lazy" />
+      </figure>
+     </div>
+   </header>
+
 
     <main>
       <section class="surface features" id="amenities">
@@ -94,7 +125,7 @@
 
       <section class="surface experiences" id="experiencias">
         <div class="section-heading">
-          <h2>Diez estilos de casa quinta para elegir </h2>
+          <h2>DIEZ ESTILOS DE CASA QUINTAS </h2>
           <p>
             Descubrí opciones pensadas para distintos gustos y necesidades: todas cuentan con
             amplios jardines, seguridad y fácil acceso desde Buenos Aires.
@@ -104,7 +135,7 @@
           
           <article class="experience-card">
             <figure class="experience-card__media">
-              <img src="img/quinta-verde.jpg" alt="Casa quinta rodeada de un parque verde" loading="lazy" />
+              <img src="img/casaquintaclasica.jpg" alt="Casa quinta rodeada de un parque verde" loading="lazy" />
             </figure>
             <div class="experience-card__body">
               <h3>Casa Quinta Clásica</h3>
@@ -113,7 +144,7 @@
                 jardín amplio ideal para juegos en familia.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -127,7 +158,7 @@
                 como vidrio y metal que llenan de luz los ambientes.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -141,7 +172,7 @@
                 invita a compartir charlas eternas.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+           <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -155,7 +186,7 @@
                 el día y compartir momentos inolvidables.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -169,7 +200,7 @@
                 festejar sin importar el clima.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -183,7 +214,7 @@
                 galerones ideales para reuniones familiares.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -196,7 +227,7 @@
                 Un espacio de tranquilidad con luz natural, ideal para la inspiración. Incluye un pequeño estudio para pintura o escritura.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -209,7 +240,7 @@
                 Comprometida con el medio ambiente, esta quinta ofrece una huerta orgánica y cuenta con sistemas de energía renovable.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+           <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -222,7 +253,7 @@
                 Perfecta para equipos o familias activas. Incluye cancha de fútbol 5, red de vóley y un gimnasio al aire libre equipado.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+           <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
           <article class="experience-card">
@@ -235,7 +266,7 @@
                 Diseño minimalista centrado en el exterior. Su principal atractivo es una enorme terraza con barra y vistas panorámicas.
               </p>
             </div>
-            <button class="btn btn--secondary" type="button">Agregar al carrito</button>
+            <button class="btn btn--secondary" type="button">DESCRIPCION DEL SERVICIO</button>
           </article>
 
         </div>
@@ -261,8 +292,52 @@
           </figure>
         </div>
       </section>
+       <section class="surface about" id="nosotros">
+  <div class="section-heading">
+    <h2>Sobre Nosotros</h2>
+    <p>En Estadía Ezeiza trabajamos para ofrecerte un espacio de descanso, confort y conexión con la naturaleza.</p>
+  </div>
+
+  <div class="about__grid">
+    <article class="about__item">
+      <h3>🌿 Misión</h3>
+      <p>
+        Brindar a nuestros visitantes una experiencia única de descanso y conexión con la naturaleza, 
+        ofreciendo casas quintas equipadas, seguras y confortables. 
+        Buscamos que cada estadía sea sinónimo de tranquilidad, disfrute y atención personalizada, 
+        creando momentos memorables para familias, grupos y empresas.
+      </p>
+    </article>
+
+    <article class="about__item">
+      <h3>🌅 Visión</h3>
+      <p>
+        Ser el destino de referencia en Ezeiza y alrededores para quienes buscan combinar confort, 
+        naturaleza y hospitalidad. Aspiramos a consolidarnos como una marca líder en turismo local sostenible, 
+        reconocida por la calidad del servicio, la innovación en la atención y el compromiso con el bienestar de nuestros huéspedes.
+      </p>
+    </article>
+
+    <article class="about__item">
+      <h3>💛 Valores</h3>
+      <ul>
+        <li>Compromiso con el bienestar de nuestros huéspedes.</li>
+        <li>Respeto y cuidado por el entorno natural.</li>
+        <li>Hospitalidad y atención personalizada.</li>
+        <li>Transparencia, confianza y profesionalismo.</li>
+        <li>Innovación constante en la experiencia del visitante.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+
+
+
+
 
       <section class="surface cta" id="reserva">
+
         <div class="section-heading">
           <h2>Coordiná una visita guiada</h2>
           <p>Contanos cómo imaginás tu evento y armamos una propuesta a tu medida.</p>
@@ -291,5 +366,65 @@
     <footer class="site-footer">
       <p>&copy; <time datetime="2024">2024</time> Estadía Ezeiza. Todos los derechos reservados.</p>
     </footer>
+      <script>
+     <script>
+      <script>
+  const searchInput = document.querySelector('.nav-search-input');
+
+  // 🔹 Limpia los resaltados anteriores
+  function clearHighlights() {
+    document.querySelectorAll('mark').forEach(mark => {
+      const parent = mark.parentNode;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    });
+  }
+
+  // 🔹 Resalta coincidencias en toda la página
+  function highlightMatches(query) {
+    if (!query) return [];
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    const foundMarks = [];
+
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      const text = node.textContent;
+      const regex = new RegExp(`(${query})`, 'gi');
+
+      if (regex.test(text)) {
+        const span = document.createElement('span');
+        span.innerHTML = text.replace(regex, '<mark>$1</mark>');
+        node.parentNode.replaceChild(span, node);
+      }
+    }
+
+    document.querySelectorAll('mark').forEach(m => foundMarks.push(m));
+    return foundMarks;
+  }
+
+  // 🔹 Mueve la vista al primer resultado
+  function scrollToFirst(markElements) {
+    if (markElements.length > 0) {
+      markElements[0].scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  }
+
+  // 🔹 Escucha cambios en el campo de búsqueda
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+    clearHighlights();
+
+    if (query.length > 1) {
+      const results = highlightMatches(query);
+      scrollToFirst(results);
+    }
+  });
+</script>
+
+
   </body>
 </html>
