@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quinta Francisco Álvarez – Descripción del servicio</title>
+    <title>Descripción del servicio</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/service-detail.js" defer></script>
   </head>
   <body class="service-page">
     <header class="subpage-header">
@@ -17,14 +18,20 @@
       </div>
     </header>
 
-    <main class="service-main">
-      <section class="surface property-hero">
+    <main class="service-main" data-service-main>
+      <p class="experiences__status" data-service-status role="status" aria-live="polite">
+        Cargando servicio...
+      </p>
+
+      <section class="surface property-hero" data-service-hero>
         <div class="property-hero__copy">
-          <p class="property-hero__eyebrow">Casa quinta destacada</p>
-          <h1>Quinta Francisco Álvarez</h1>
-          <p class="property-hero__lead">
-            Un refugio moderno en la zona oeste de Buenos Aires pensado para jornadas inolvidables.
-            Descubrí cada ambiente y todas las comodidades incluidas.
+          <p class="property-hero__eyebrow" data-service-eyebrow>Servicio destacado</p>
+          <h1 data-service-name>Nombre del servicio</h1>
+          <p class="property-hero__location" data-service-location>
+            Ubicación disponible próximamente.
+          </p>
+          <p class="property-hero__lead" data-service-summary>
+            En breve vas a poder ver la información completa de este servicio.
           </p>
           <div class="property-hero__actions">
             <a class="btn btn--primary" href="Contacto.html">Reservar fecha</a>
@@ -33,10 +40,20 @@
         </div>
         <div class="property-hero__media">
           <figure>
-            <img src="img/casaquintaclasica.jpg" alt="Vista exterior de la quinta Francisco Álvarez al atardecer" loading="lazy" />
+            <img
+              data-service-image="0"
+              src="img/casaquintaclasica.jpg"
+              alt="Imagen principal del servicio"
+              loading="lazy"
+            />
           </figure>
           <figure>
-            <img src="img/quinta-verde.jpg" alt="Piscina iluminada y parque de la quinta" loading="lazy" />
+            <img
+              data-service-image="1"
+              src="img/quinta-verde.jpg"
+              alt="Imagen secundaria del servicio"
+              loading="lazy"
+            />
           </figure>
         </div>
       </section>
@@ -44,32 +61,36 @@
       <section class="surface property-meta" id="caracteristicas">
         <div class="section-heading">
           <h2>Características del inmueble</h2>
-          <p>Espacios amplios, luminosos y preparados para que cada visita sea única.</p>
+          <p data-service-meta-intro>Espacios amplios, luminosos y preparados para visitas memorables.</p>
         </div>
         <dl class="property-meta__grid">
           <div>
             <dt>Superficie total</dt>
-            <dd>450 m²</dd>
+            <dd data-service-total-area>—</dd>
           </div>
           <div>
             <dt>Superficie cubierta</dt>
-            <dd>65 m²</dd>
+            <dd data-service-covered-area>—</dd>
           </div>
           <div>
             <dt>Ambientes</dt>
-            <dd>1</dd>
+            <dd data-service-rooms-count>—</dd>
+          </div>
+          <div>
+            <dt>Capacidad máxima</dt>
+            <dd data-service-capacity>—</dd>
           </div>
           <div>
             <dt>Baños</dt>
-            <dd>1 completo</dd>
+            <dd data-service-bathrooms>—</dd>
           </div>
           <div>
             <dt>Check-in</dt>
-            <dd>09:00</dd>
+            <dd data-service-checkin>—</dd>
           </div>
           <div>
             <dt>Check-out</dt>
-            <dd>19:00</dd>
+            <dd data-service-checkout>—</dd>
           </div>
         </dl>
       </section>
@@ -78,22 +99,14 @@
         <div class="property-columns">
           <article class="property-card">
             <h3>Ambientes</h3>
-            <ul>
-              <li>Toilette</li>
-              <li>Comedor</li>
-              <li>Living</li>
-              <li>Patio y jardín</li>
-              <li>Cocina totalmente equipada</li>
+            <ul data-service-ambiences>
+              <li>La información del servicio estará disponible en instantes.</li>
             </ul>
           </article>
           <article class="property-card">
             <h3>Comodidades y equipamiento</h3>
-            <ul>
-              <li>Quincho cerrado de 40 m² con patio semi cubierto</li>
-              <li>Parrilla de 1,80 m con fogonero</li>
-              <li>Heladera, horno, anafe, microondas, cafetera y pava eléctrica</li>
-              <li>Living con sillón, camastro y Smart TV con Wi-Fi</li>
-              <li>Aire acondicionado frío/calor y baño completo con ducha</li>
+            <ul data-service-amenities>
+              <li>Estamos recuperando los detalles del servicio.</li>
             </ul>
           </article>
         </div>
@@ -102,41 +115,32 @@
       <section class="surface property-description">
         <div class="property-description__content">
           <h2>Descripción</h2>
-          <p>
-            Ubicada en Francisco Álvarez, a solo diez cuadras de la bajada Gorriti en Acceso Oeste, esta quinta
-            se convierte en el escenario perfecto para desconectar de la ciudad. Sus 375 m² de parque incluyen una
-            piscina de 8 x 4 metros con playa húmeda incorporada, solárium y mobiliario exterior para relajarse.
-          </p>
-          <p>
-            El quincho cerrado invita a compartir asados y celebraciones en cualquier estación, mientras que el
-            interior climatizado asegura confort total durante toda la jornada. Cada detalle fue pensado para que
-            familias y grupos de amigos disfruten de encuentros memorables en un entorno seguro y natural.
-          </p>
+          <div data-service-description>
+            <p>En breve verás la descripción detallada del servicio seleccionado.</p>
+          </div>
         </div>
       </section>
 
       <section class="surface property-rates">
         <div class="section-heading">
           <h2>Tarifas y disponibilidad</h2>
-          <p>Temporada de noviembre a marzo. Alquiler diario sin pernocte.</p>
+          <p data-service-rates-intro>Los valores pueden variar según la fecha seleccionada.</p>
         </div>
         <div class="property-rates__grid">
           <article>
-            <h3>Lunes a jueves</h3>
-            <p class="property-rates__price">$200.000 por día</p>
-            <p>Incluye uso de instalaciones para hasta 20 personas.</p>
+            <h3 data-service-weekday-title>Lunes a jueves</h3>
+            <p class="property-rates__price" data-service-weekday-rate>Consultar</p>
+            <p data-service-weekday-description>Los valores se confirmarán al cargar el servicio.</p>
           </article>
           <article>
-            <h3>Viernes, sábados, domingos y feriados</h3>
-            <p class="property-rates__price">$250.000 por día</p>
-            <p>Incluye mesas, sillas y vajilla completas.</p>
+            <h3 data-service-weekend-title>Viernes, sábados, domingos y feriados</h3>
+            <p class="property-rates__price" data-service-weekend-rate>Consultar</p>
+            <p data-service-weekend-description>Los valores se confirmarán al cargar el servicio.</p>
           </article>
         </div>
         <div class="property-rates__notes">
-          <ul>
-            <li>Capacidad máxima: 40 personas. Consultar por adicionales.</li>
-            <li>Depósito de garantía del 30% reembolsable tras verificar el estado del inmueble.</li>
-            <li>Pago total al ingresar. No se realizan devoluciones por mal clima.</li>
+          <ul data-service-notes>
+            <li>Las condiciones se mostrarán cuando se cargue el servicio.</li>
           </ul>
         </div>
         <div class="property-rates__cta">

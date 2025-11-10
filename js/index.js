@@ -87,8 +87,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const link = document.createElement('a');
       link.className = 'btn btn--secondary';
-      link.href = 'descripcion-servicio.html';
       link.textContent = 'Descripción del servicio';
+
+      if (record?.id) {
+        link.href = `descripcion-servicio.html?id=${encodeURIComponent(record.id)}`;
+        link.dataset.serviceId = record.id;
+        link.addEventListener('click', () => {
+          try {
+            sessionStorage.setItem('selectedExperienceId', record.id);
+          } catch (error) {
+            console.warn('No se pudo almacenar el identificador en sessionStorage.', error);
+          }
+        });
+      } else {
+        link.href = 'descripcion-servicio.html';
+      }
 
       article.appendChild(figure);
       article.appendChild(body);
