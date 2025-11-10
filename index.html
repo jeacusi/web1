@@ -5,21 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vení a Ezeiza a relajarte de la ciudad</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/index.js" defer></script>
   </head>
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href').slice(1);
-        const t = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
-        if (t) {
-          e.preventDefault();
-          t.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
 
   <body>
    <header class="site-header">
@@ -147,144 +134,8 @@
             cuentan con amplios jardines, seguridad y excelente acceso desde Buenos Aires.
           </p>
         </div>
-        <div class="experiences__grid">
-          
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/casaquintaclasica.jpg" alt="Casa quinta rodeada de un parque verde" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta Clásica</h3>
-              <p>
-                Arquitectura tradicional con techos inclinados, paredes de ladrillo visto y un
-                jardín amplio ideal para juegos en familia.
-              </p>
-            </div>
-           <a class="btn btn--secondary" href="descripcion-servicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/quinta-tenis.jpg" alt="Casa quinta con cancha de tenis" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta Moderna</h3>
-              <p>
-                Diseño vanguardista con líneas limpias, grandes ventanales y materiales innovadores
-                como vidrio y metal que llenan de luz los ambientes.
-              </p>
-            </div>
-            <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/cumpleaños.jpg" alt="Decoración de fiesta de cumpleaños junto a la piscina" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta Rústica</h3>
-              <p>
-                Ambientes revestidos en madera y piedra, con hogar a leña y un clima acogedor que
-                invita a compartir charlas eternas.
-              </p>
-            </div>
-           <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/evento-empresa.jpg" alt="Evento corporativo en una casa quinta" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta con Piscina</h3>
-              <p>
-                Piscina protagonista con solárium y livings exteriores para refrescarse durante todo
-                el día y compartir momentos inolvidables.
-              </p>
-            </div>
-           <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/quinta-flores.jpg" alt="Quincho equipado para reuniones familiares" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta con Quincho</h3>
-              <p>
-                Espacio dedicado a los asados con parrilla completa, barra y quincho cerrado para
-                festejar sin importar el clima.
-              </p>
-            </div>
-            <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/quinta-verde.jpg" alt="Casa quinta de ladrillo a la vista rodeada de árboles" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta de Ladrillo</h3>
-              <p>
-                Fachada clásica sin revestimiento que combina elegancia y calidez, con galerías y
-                galerones ideales para reuniones familiares.
-              </p>
-            </div>
-            <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/quinta-tenis.jpg" alt="Estudio de artista con grandes ventanales" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Retiro del Artista 🎨</h3>
-              <p>
-                Un espacio de tranquilidad con luz natural, ideal para la inspiración. Incluye un pequeño estudio para pintura o escritura.
-              </p>
-            </div>
-            <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/quinta-flores.jpg" alt="Huerta orgánica y paneles solares" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Casa Quinta Eco-Friendly ♻️</h3>
-              <p>
-                Comprometida con el medio ambiente, esta quinta ofrece una huerta orgánica y cuenta con sistemas de energía renovable.
-              </p>
-            </div>
-          <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/evento-empresa.jpg" alt="Cancha de deportes y gimnasio al aire libre" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>Quinta Deportiva ⚽</h3>
-              <p>
-                Perfecta para equipos o familias activas. Incluye cancha de fútbol 5, red de vóley y un gimnasio al aire libre equipado.
-              </p>
-            </div>
-           <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
-          <article class="experience-card">
-            <figure class="experience-card__media">
-              <img src="img/cumpleaños.jpg" alt="Terraza amplia con vistas al atardecer" loading="lazy" />
-            </figure>
-            <div class="experience-card__body">
-              <h3>La Gran Terraza 🌅</h3>
-              <p>
-                Diseño minimalista centrado en el exterior. Su principal atractivo es una enorme terraza con barra y vistas panorámicas.
-              </p>
-            </div>
-           <a class="btn btn--secondary" href="descriciondelservicio.html">Descripción del servicio</a>
-          </article>
-
+        <div class="experiences__grid" data-experiences-grid>
+          <!-- El contenido se cargará dinámicamente desde Airtable -->
         </div>
       </section>
 
@@ -373,101 +224,9 @@
       </section>
     </main>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        document.querySelectorAll('[data-auto-carousel]').forEach(carousel => {
-          const slides = Array.from(carousel.querySelectorAll('[data-carousel-slide]'));
-          if (slides.length === 0) {
-            return;
-          }
-
-          let activeIndex = slides.findIndex(slide => slide.classList.contains('is-active'));
-          if (activeIndex < 0) {
-            activeIndex = 0;
-            slides[0].classList.add('is-active');
-          }
-
-          const setActive = newIndex => {
-            slides.forEach((slide, idx) => {
-              slide.classList.toggle('is-active', idx === newIndex);
-            });
-            activeIndex = newIndex;
-          };
-
-          setActive(activeIndex);
-
-          if (prefersReducedMotion || slides.length === 1) {
-            return;
-          }
-
-          const rawInterval = Number(carousel.dataset.interval);
-          const delay = Number.isFinite(rawInterval) && rawInterval > 0 ? rawInterval : 6000;
-
-          setInterval(() => {
-            const nextIndex = (activeIndex + 1) % slides.length;
-            setActive(nextIndex);
-          }, delay);
-        });
-      });
-    </script>
-
     <footer class="site-footer">
       <p>&copy; <time datetime="2024">2024</time> Estadía Ezeiza. Todos los derechos reservados.</p>
     </footer>
-    <script>
-      const searchInput = document.querySelector('.nav-search-input');
-
-      function clearHighlights() {
-        document.querySelectorAll('mark').forEach(mark => {
-          const parent = mark.parentNode;
-          parent.replaceChild(document.createTextNode(mark.textContent), mark);
-          parent.normalize();
-        });
-      }
-
-      function highlightMatches(query) {
-        if (!query) return [];
-
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-        const foundMarks = [];
-
-        while (walker.nextNode()) {
-          const node = walker.currentNode;
-          const text = node.textContent;
-          const regex = new RegExp(`(${query})`, 'gi');
-
-          if (regex.test(text)) {
-            const span = document.createElement('span');
-            span.innerHTML = text.replace(regex, '<mark>$1</mark>');
-            node.parentNode.replaceChild(span, node);
-          }
-        }
-
-        document.querySelectorAll('mark').forEach(m => foundMarks.push(m));
-        return foundMarks;
-      }
-
-      function scrollToFirst(markElements) {
-        if (markElements.length > 0) {
-          markElements[0].scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
-        }
-      }
-
-      searchInput.addEventListener('input', () => {
-        const query = searchInput.value.trim();
-        clearHighlights();
-
-        if (query.length > 1) {
-          const results = highlightMatches(query);
-          scrollToFirst(results);
-        }
-      });
-    </script>
 
   </body>
 </html>
