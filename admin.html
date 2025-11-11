@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Admin - Estadía Ezeiza</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/admin.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header__bar">
+    <span class="site-logo">Panel de Administración</span>
+    <nav class="site-menu">
+      <a href="index.html">Inicio</a>
+      <a href="Contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="surface">
+    <section class="section-heading">
+      <h2>Gestión de Servicios</h2>
+      <p>Desde aquí podés crear, editar o eliminar las casas quintas.</p>
+    </section>
+
+    <section class="surface">
+      <form id="form-servicio" class="contact-form">
+        <input type="hidden" id="recordId" />
+        <input type="text" id="nombre" placeholder="Nombre del servicio" required />
+        <textarea id="descripcion" rows="3" placeholder="Descripción" required></textarea>
+        <input type="number" id="precio" placeholder="Precio por noche" />
+        <button type="submit" class="btn btn--primary">Guardar Servicio</button>
+        <button type="button" id="btn-limpiar" class="btn btn--ghost">Limpiar</button>
+      </form>
+    </section>
+
+    <section class="surface">
+      <h3>Listado de servicios</h3>
+      <table class="info-table" id="tabla-servicios">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Favorito</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="servicios-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Estadía Ezeiza - Panel Admin</p>
+  </footer>
+</body>
+</html>
+⚙️ 2️⃣ Nuevo archivo JavaScript — 
