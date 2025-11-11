@@ -581,6 +581,34 @@ h1 + p{font-size:1.06rem; opacity:.9}
     text-align: center;
 }
 
+.form-status {
+    display: none;
+    margin-top: 1.25rem;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-status.is-visible {
+    display: block;
+}
+
+.form-status--info {
+    color: #0d4b78;
+    background: rgba(13, 75, 120, 0.12);
+}
+
+.form-status--success {
+    color: #1b7a46;
+    background: rgba(27, 122, 70, 0.12);
+}
+
+.form-status--error {
+    color: #b82800;
+    background: rgba(184, 40, 0, 0.12);
+}
+
 .contact-info {
     margin-top: 1rem;
     text-align: center;
@@ -869,7 +897,7 @@ input[type=text], input[type=email], textarea{
     }
 
     .cart-hero__summary {
-        width: 100%;
+        width:90%;
     }
 
     .cart-card {
@@ -1190,19 +1218,84 @@ mark {
 }
 
 @media (min-width: 900px) {
-    .property-hero {
-        grid-template-columns: 1.1fr 0.9fr;
-    }
+  .property-hero {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
 
-    .property-hero__media {
-        grid-template-columns: 1fr;
-    }
+  .property-hero__media {
+    grid-template-columns: 1fr;
+  }
 
-    .property-columns {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .property-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-    .property-rates__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .property-rates__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Márgenes laterales mínimos de 5 mm en pantallas grandes */
+  main, .surface, .container {
+    padding-left: 5mm;
+    padding-right: 5mm;
+  }
 }
+/* ========================================================================== 
+   10. Tipografía responsiva global 
+   ========================================================================== */
+
+/* Tamaño base adaptativo */
+html {
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* Títulos principales */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+/* Subtítulos */
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+  line-height: 1.3;
+}
+
+/* Títulos menores */
+h3 {
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+}
+
+/* Párrafos, listas y textos comunes */
+p, li {
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  line-height: 1.6;
+}
+
+/* Botones */
+.btn {
+  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+}
+
+/* Menú de navegación */
+.site-menu a {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+/* Formularios y pie de página */
+label, input, textarea, footer p {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+}
+
+/* Alineación para pantallas pequeñas */
+@media (max-width: 650px) {
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  p, li {
+    text-align: justify;
+  }
+}
+
+

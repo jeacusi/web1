@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contactos - Reserva Casa Quinta</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/contact.js" defer></script>
 </head>
 <body>
   <!-- ===== Encabezado ===== -->
@@ -15,7 +16,7 @@
 
   <!-- ===== Formulario de Contactos ===== -->
   <section class="surface">
-    <form action="#" method="post">
+    <form action="#" method="post" data-contact-form>
       <table class="form-table">
         <tbody>
           <tr>
@@ -58,6 +59,7 @@
         </tbody>
       </table>
     </form>
+    <p class="form-status" data-form-status aria-live="polite"></p>
   </section>
 
   <!-- ===== Footer ===== -->
