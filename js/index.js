@@ -199,3 +199,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+   // ====== Recordar la última búsqueda con localStorage ======
+const searchInput = document.querySelector('.nav-search-input');
+
+if (searchInput) {
+  // Cuando el usuario escribe, guardamos su búsqueda
+  searchInput.addEventListener('input', () => {
+    const valor = searchInput.value.trim();
+    localStorage.setItem('ultimaBusqueda', valor);
+  });
+
+  // Al cargar la página, recuperamos la última búsqueda
+  const guardada = localStorage.getItem('ultimaBusqueda');
+  if (guardada) {
+    searchInput.value = guardada;
+    console.log(`Última búsqueda recuperada: ${guardada}`);
+  }
+
+  // 👉 Mostrar mensaje si ya había hecho una búsqueda antes
+  if (localStorage.getItem('ultimaBusqueda')) {
+    alert('¡Bienvenido de nuevo! Recordamos tu última búsqueda.');
+  }
+}
+ // ====== FUNCIONALIDAD DE CARRITO ======
+
+function agregarAlCarrito(id, nombre) {
+  // Leer el carrito actual desde localStorage
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  // Verificar si el producto ya existe
+  const existe = carrito.some(item => item.id === id);
+
+  if (existe) {
+    alert(`⚠️ El servicio "${nombre}" ya está en el carrito.`);
+    return;
+  }
+
+  // Agregar nuevo servicio
+  carrito.push({ id, nombre });
+
+  // Guardar carrito actualizado
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  alert(`✅ "${nombre}" agregado al carrito.`);
+  console.log('Carrito actual:', carrito);
+}
