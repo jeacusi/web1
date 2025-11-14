@@ -141,106 +141,56 @@ document.addEventListener('DOMContentLoaded', () => {
         records.forEach(record => {
           experiencesGrid.appendChild(createCard(record));
         });
+
+        initializeExperienceSearch(experiencesGrid);
       })
       .catch(() => {
         showError('Ocurrió un error al cargar las experiencias. Intentá nuevamente más tarde.');
       });
   }
 
-  const searchInput = document.querySelector('.nav-search-input');
-  if (searchInput) {
-    const clearHighlights = () => {
-      document.querySelectorAll('mark').forEach(mark => {
-        const parent = mark.parentNode;
-        parent.replaceChild(document.createTextNode(mark.textContent), mark);
-        parent.normalize();
-      });
-    };
+  const initializeExperienceSearch = grid => {
+    const searchInput = document.querySelector('.nav-search-input');
+    if (!searchInput || !grid) {
+      return;
+    }
 
-    const highlightMatches = query => {
-      if (!query) return [];
+    const emptyStateId = 'experiences-empty-state';
+    let emptyState = document.getElementById(emptyStateId);
+    if (!emptyState) {
+      emptyState = document.createElement('p');
+      emptyState.id = emptyStateId;
+      emptyState.className = 'experiences__status experiences__status--empty';
+      emptyState.textContent = 'No encontramos experiencias que coincidan con tu búsqueda.';
+      emptyState.hidden = true;
+      grid.parentNode.insertBefore(emptyState, grid.nextSibling);
+    }
 
-      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-      const foundMarks = [];
+    const filterCards = query => {
+      const normalizedQuery = query.trim().toLowerCase();
+      let visibleCount = 0;
 
-      while (walker.nextNode()) {
-        const node = walker.currentNode;
-        const text = node.textContent;
-        const regex = new RegExp(`(${query})`, 'gi');
-
-        if (regex.test(text)) {
-          const span = document.createElement('span');
-          span.innerHTML = text.replace(regex, '<mark>$1</mark>');
-          node.parentNode.replaceChild(span, node);
+      grid.querySelectorAll('.experience-card').forEach(card => {
+        const body = card.querySelector('.experience-card__body');
+        const headingText = body?.querySelector('h3')?.textContent || '';
+        const paragraphsText = Array.from(body?.querySelectorAll('p') || [])
+          .map(paragraph => paragraph.textContent)
+          .join(' ');
+        const searchableText = `${headingText} ${paragraphsText}`.trim().toLowerCase();
+        const matches = !normalizedQuery || searchableText.includes(normalizedQuery);
+        card.style.display = matches ? '' : 'none';
+        if (matches) {
+          visibleCount += 1;
         }
-      }
+      });
 
-      document.querySelectorAll('mark').forEach(mark => foundMarks.push(mark));
-      return foundMarks;
-    };
-
-    const scrollToFirst = markElements => {
-      if (markElements.length > 0) {
-        markElements[0].scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        });
-      }
+      emptyState.hidden = visibleCount > 0;
     };
 
     searchInput.addEventListener('input', () => {
-      const query = searchInput.value.trim();
-      clearHighlights();
-
-      if (query.length > 1) {
-        const results = highlightMatches(query);
-        scrollToFirst(results);
-      }
+      filterCards(searchInput.value);
     });
-  }
+
+    filterCards(searchInput.value);
+  };
 });
-   // ====== Recordar la última búsqueda con localStorage ======
-const searchInput = document.querySelector('.nav-search-input');
-
-if (searchInput) {
-  // Cuando el usuario escribe, guardamos su búsqueda
-  searchInput.addEventListener('input', () => {
-    const valor = searchInput.value.trim();
-    localStorage.setItem('ultimaBusqueda', valor);
-  });
-
-  // Al cargar la página, recuperamos la última búsqueda
-  const guardada = localStorage.getItem('ultimaBusqueda');
-  if (guardada) {
-    searchInput.value = guardada;
-    console.log(`Última búsqueda recuperada: ${guardada}`);
-  }
-
-  // 👉 Mostrar mensaje si ya había hecho una búsqueda antes
-  if (localStorage.getItem('ultimaBusqueda')) {
-    alert('¡Bienvenido de nuevo! Recordamos tu última búsqueda.');
-  }
-}
- // ====== FUNCIONALIDAD DE CARRITO ======
-
-function agregarAlCarrito(id, nombre) {
-  // Leer el carrito actual desde localStorage
-  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-  // Verificar si el producto ya existe
-  const existe = carrito.some(item => item.id === id);
-
-  if (existe) {
-    alert(`⚠️ El servicio "${nombre}" ya está en el carrito.`);
-    return;
-  }
-
-  // Agregar nuevo servicio
-  carrito.push({ id, nombre });
-
-  // Guardar carrito actualizado
-  localStorage.setItem('carrito', JSON.stringify(carrito));
-
-  alert(`✅ "${nombre}" agregado al carrito.`);
-  console.log('Carrito actual:', carrito);
-}
