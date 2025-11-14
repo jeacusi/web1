@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor de experiencias – Estadía Ezeiza</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/experience-editor.js" defer></script>
+  </head>
+  <body class="editor-body">
+    <header class="subpage-header">
+      <div class="subpage-header__bar">
+        <a class="site-logo" href="index.html">Estadía Ezeiza</a>
+        <nav class="subpage-menu" aria-label="Navegación secundaria">
+          <a class="btn btn--ghost" href="admin.html">Volver al panel</a>
+          <a class="btn btn--primary" href="index.html">Ver sitio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="editor-main" aria-live="polite">
+      <section class="surface editor-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Contenido destacado del home</p>
+          <h1>Editar experiencia publicada en index.html</h1>
+          <p>
+            Utilizá este formulario para actualizar el registro almacenado en Airtable. Los cambios se reflejan en el
+            listado principal una vez que guardes la información.
+          </p>
+        </div>
+
+        <div class="editor-layout">
+          <form id="experience-form" class="editor-form" autocomplete="off">
+            <div class="form-field">
+              <label for="nombre">Nombre del servicio</label>
+              <input type="text" id="nombre" name="nombre" maxlength="120" required />
+            </div>
+
+            <div class="form-field">
+              <label for="resumen">Resumen corto</label>
+              <textarea id="resumen" name="resumen" rows="2" maxlength="280" placeholder="Frase introductoria"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="descripcion">Descripción extendida</label>
+              <textarea id="descripcion" name="descripcion" rows="6" placeholder="Detalle completo que se mostrará en index.html"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label for="ubicacion">Ubicación</label>
+              <input type="text" id="ubicacion" name="ubicacion" maxlength="120" placeholder="Ej: Ezeiza, Buenos Aires" />
+            </div>
+
+            <div class="form-field form-field--half">
+              <label for="tarifa-semana">Tarifa lunes a jueves</label>
+              <input type="text" id="tarifa-semana" name="tarifaSemana" placeholder="$250.000" />
+            </div>
+
+            <div class="form-field form-field--half">
+              <label for="tarifa-finde">Tarifa fin de semana y feriados</label>
+              <input type="text" id="tarifa-finde" name="tarifaFinde" placeholder="$350.000" />
+            </div>
+
+            <div class="form-field">
+              <label for="imagen">URL de imagen destacada</label>
+              <input type="url" id="imagen" name="imagen" placeholder="https://..." />
+              <small>La imagen debe ser pública para que Airtable pueda descargarla.</small>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Guardar cambios</button>
+            <p class="form-status" data-editor-status role="status"></p>
+          </form>
+
+          <aside class="editor-preview">
+            <h2>Vista previa</h2>
+            <article class="experience-card experience-card--preview">
+              <figure class="experience-card__media">
+                <img data-preview-image src="img/casaquintaclasica.jpg" alt="Imagen de la experiencia" loading="lazy" />
+              </figure>
+              <div class="experience-card__body">
+                <h3 data-preview-name>Nombre del servicio</h3>
+                <p data-preview-description>Descripción corta de la experiencia seleccionada.</p>
+                <p class="editor-preview__meta">
+                  <span data-preview-location>Ubicación pendiente</span>
+                  ·
+                  <span data-preview-weekday>Tarifa semanal</span>
+                  ·
+                  <span data-preview-weekend>Tarifa fin de semana</span>
+                </p>
+              </div>
+              <span class="btn btn--secondary editor-preview__tag">Descripción del servicio</span>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
