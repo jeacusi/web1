@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrar experiencias - Estadía Ezeiza</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/administrar-pagina.js" defer></script>
+  </head>
+  <body>
+    <header class="subpage-header">
+      <div class="subpage-header__bar">
+        <a class="site-logo" href="index.html">Estadía Ezeiza</a>
+        <nav class="subpage-menu" aria-label="Navegación secundaria">
+          <a class="btn btn--ghost" href="index.html">Volver al inicio</a>
+          <a class="btn btn--primary" href="editar-experiencia.html">Crear nueva experiencia</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="surface experiences experiences--admin">
+        <div class="section-heading">
+          <p class="eyebrow">Panel de gestión</p>
+          <h1>Administrar experiencias publicadas</h1>
+          <p>
+            Este panel consume la API de Airtable y muestra todas las experiencias disponibles. Desde aquí podés ir a la
+            descripción pública, editar el registro o eliminarlo definitivamente.
+          </p>
+        </div>
+        <p class="experiences__status" data-admin-status role="status" aria-live="polite">Cargando experiencias...</p>
+        <div class="experiences__grid" data-admin-experiences aria-live="polite"></div>
+      </section>
+    </main>
+  </body>
+</html>

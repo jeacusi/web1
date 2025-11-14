@@ -84,10 +84,19 @@ h1 + p{font-size:1.06rem; opacity:.9}
     color: var(--deep) !important;
     box-shadow: none;
     border: 2px solid var(--deep);
-    padding: 10px 18px; 
+    padding: 10px 18px;
 }
 .btn--ghost:hover {
     background: rgba(47, 143, 117, 0.1);
+}
+
+.btn--danger {
+    background: #ff6b6b;
+    color: #fff !important;
+}
+
+.btn--danger:hover {
+    filter: brightness(1.05);
 }
 
 /* Utilidades */
@@ -729,7 +738,23 @@ h1 + p{font-size:1.06rem; opacity:.9}
 .experiences__grid {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+    justify-content: center;
+}
+
+.experiences__status {
+    text-align: center;
+    font-weight: 600;
+    color: var(--deep);
+    margin: 1rem auto 2rem;
+}
+
+.experiences__status--error {
+    color: #b42318;
+}
+
+.experiences__status--empty {
+    opacity: .75;
 }
 
 .experience-card {
@@ -741,6 +766,8 @@ h1 + p{font-size:1.06rem; opacity:.9}
     overflow: hidden;
     transition: box-shadow .2s ease, transform .2s ease;
     text-align: left;
+    width: min(100%, 360px);
+    margin-inline: auto;
 }
 
 .experience-card:hover {
@@ -777,9 +804,26 @@ h1 + p{font-size:1.06rem; opacity:.9}
     color: var(--deep);
 }
 
-.experience-card button {
-    margin: 0 20px 20px;
-    width: calc(100% - 40px);
+.experience-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px 20px;
+}
+
+.experience-card__actions .btn {
+    width: 100%;
+}
+
+@media (min-width: 480px) {
+    .experience-card__actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .experience-card__actions .btn {
+        flex: 1;
+    }
 }
 
 
@@ -897,7 +941,7 @@ input[type=text], input[type=email], textarea{
     }
 
     .cart-hero__summary {
-        width:90%;
+        width: 100%;
     }
 
     .cart-card {
@@ -1087,6 +1131,10 @@ mark {
     padding-bottom: 4rem;
 }
 
+.admin-main {
+    padding: 2rem clamp(1.25rem, 4vw, 3rem) 4rem;
+}
+
 .property-hero {
     display: grid;
     gap: 2rem;
@@ -1218,84 +1266,267 @@ mark {
 }
 
 @media (min-width: 900px) {
-  .property-hero {
-    grid-template-columns: 1.1fr 0.9fr;
-  }
+    .property-hero {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
 
-  .property-hero__media {
-    grid-template-columns: 1fr;
-  }
+    .property-hero__media {
+        grid-template-columns: 1fr;
+    }
 
-  .property-columns {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+    .property-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  .property-rates__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  /* Márgenes laterales mínimos de 5 mm en pantallas grandes */
-  main, .surface, .container {
-    padding-left: 5mm;
-    padding-right: 5mm;
-  }
+    .property-rates__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
-/* ========================================================================== 
-   10. Tipografía responsiva global 
+
+/* ==========================================================================
+   Login Page Styles
    ========================================================================== */
-
-/* Tamaño base adaptativo */
-html {
-  font-size: clamp(14px, 1.2vw, 18px);
+.login-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Títulos principales */
-h1 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  line-height: 1.2;
+.login-header {
+    position: static;
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
 }
 
-/* Subtítulos */
-h2 {
-  font-size: clamp(1.4rem, 3vw, 2.3rem);
-  line-height: 1.3;
+.login-main {
+    flex: 1;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 0 clamp(1rem, 4vw, 4rem) 2.5rem;
+    align-items: stretch;
 }
 
-/* Títulos menores */
-h3 {
-  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+.login-card,
+.login-side {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 30px;
+    padding: clamp(1.5rem, 3vw, 3rem);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-/* Párrafos, listas y textos comunes */
-p, li {
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  line-height: 1.6;
+.login-card__intro h1 {
+    margin-bottom: 0.5rem;
 }
 
-/* Botones */
-.btn {
-  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
+.login-card__intro .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--green);
+    font-weight: 700;
 }
 
-/* Menú de navegación */
-.site-menu a {
-  font-size: clamp(0.9rem, 1.5vw, 1rem);
+.login-card__intro .subtitle {
+    opacity: 0.8;
+    margin: 0;
 }
 
-/* Formularios y pie de página */
-label, input, textarea, footer p {
-  font-size: clamp(0.85rem, 1.2vw, 1rem);
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-/* Alineación para pantallas pequeñas */
-@media (max-width: 650px) {
-  h1, h2, h3 {
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.form-field label {
+    font-weight: 600;
+    color: var(--deep);
+}
+
+.form-field input {
+    border-radius: 16px;
+    border: 1px solid rgba(19, 59, 49, 0.2);
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(47, 143, 117, 0.15);
+}
+
+.login-button {
+    width: 100%;
+}
+
+.helper-text {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.login-status {
+    min-height: 1.5rem;
+    font-weight: 600;
+}
+
+.login-status--error {
+    color: #c0392b;
+}
+
+.login-status--success {
+    color: #1c7c54;
+}
+
+.login-side ul {
+    padding-left: 1.25rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.login-side__content h2 {
+    margin-top: 0;
+}
+
+.login-side__footer {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(19, 59, 49, 0.15);
+    font-size: 0.95rem;
+}
+
+.login-footer {
     text-align: center;
-  }
-
-  p, li {
-    text-align: justify;
-  }
+    padding-bottom: 2rem;
 }
 
+@media (max-width: 640px) {
+    .login-main {
+        padding-inline: 1.5rem;
+    }
+}
 
+.editor-body {
+    background: radial-gradient(circle at top, rgba(250, 250, 250, 0.95), #f1f5f3);
+    min-height: 100vh;
+}
+
+.editor-main {
+    padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 6vw, 6rem) 4rem;
+}
+
+.editor-panel {
+    border-radius: 32px;
+    box-shadow: var(--shadow);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.editor-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 2rem;
+}
+
+.editor-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.editor-form .form-field {
+    grid-column: 1 / -1;
+}
+
+.editor-form .form-field--half {
+    grid-column: span 1;
+}
+
+.editor-form button,
+.editor-form .form-status {
+    grid-column: 1 / -1;
+}
+
+.form-field textarea {
+    border-radius: 16px;
+    border: 1px solid rgba(19, 59, 49, 0.2);
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 120px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(47, 143, 117, 0.15);
+}
+
+.form-field small {
+    color: rgba(19, 59, 49, 0.7);
+}
+
+.form-status {
+    min-height: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--deep);
+}
+
+.form-status--error {
+    color: #c0392b;
+}
+
+.editor-preview {
+    background: rgba(19, 59, 49, 0.04);
+    border-radius: 28px;
+    padding: clamp(1rem, 3vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.editor-preview h2 {
+    margin: 0;
+}
+
+.experience-card--preview {
+    position: relative;
+    border: 1px dashed rgba(19, 59, 49, 0.2);
+    padding-bottom: 1rem;
+}
+
+.editor-preview__meta {
+    font-size: 0.9rem;
+    color: rgba(19, 59, 49, 0.8);
+}
+
+.editor-preview__tag {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    pointer-events: none;
+}
+
+@media (max-width: 640px) {
+    .editor-form {
+        grid-template-columns: 1fr;
+    }
+    .editor-form .form-field--half {
+        grid-column: 1 / -1;
+    }
+}
