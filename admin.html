@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso Admin - Estadía Ezeiza</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/admin.js" defer></script>
+</head>
+<body class="login-body">
+  <header class="site-header__bar login-header">
+    <a class="site-logo" href="index.html">Estadía Ezeiza</a>
+    <nav class="site-menu">
+      <a href="index.html">Inicio</a>
+      <a href="Contacto.html">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="login-main">
+    <section class="login-card surface">
+      <div class="login-card__intro">
+        <p class="eyebrow">Panel de administración</p>
+        <h1>Ingresá para gestionar tus reservas</h1>
+        <p class="subtitle">
+          Utilizá tu usuario y contraseña asignados para acceder a las herramientas de carga
+          de servicios. Solo los administradores autorizados pueden ingresar al panel.
+        </p>
+      </div>
+
+      <form id="login-form" class="login-form" autocomplete="off">
+        <div class="form-field">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Ej: jea" required />
+        </div>
+        <div class="form-field">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Tu contraseña" required />
+        </div>
+        <button type="submit" class="btn btn--primary login-button">Iniciar sesión</button>
+        <p class="helper-text">Solo el usuario administrador puede acceder a este panel.</p>
+      </form>
+      <p id="login-status" class="login-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="login-side surface">
+      <div class="login-side__content">
+        <h2>¿Qué vas a encontrar dentro?</h2>
+        <ul>
+          <li>Gestión centralizada de casas quintas y servicios.</li>
+          <li>Edición rápida de precios y descripciones.</li>
+          <li>Sincronización directa con tu base de Airtable.</li>
+        </ul>
+      </div>
+      <div class="login-side__footer">
+        <p><strong>Tip:</strong> Si olvidaste tus credenciales comunicate con el administrador.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer login-footer">
+    <p>&copy; 2025 Estadía Ezeiza &middot; Acceso privado</p>
+  </footer>
+</body>
+</html>
