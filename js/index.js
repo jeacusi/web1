@@ -105,7 +105,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
       article.appendChild(figure);
       article.appendChild(body);
-      article.appendChild(link);
+
+      const actions = document.createElement('div');
+      actions.className = 'experience-card__actions';
+
+      const reserveButton = document.createElement('a');
+      reserveButton.className = 'btn btn--primary';
+      reserveButton.textContent = 'Reserver';
+      reserveButton.href = 'Contacto.html';
+
+      actions.appendChild(link);
+      actions.appendChild(reserveButton);
+
+      article.appendChild(actions);
 
       return article;
     };
