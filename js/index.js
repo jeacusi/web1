@@ -56,72 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingMessage.textContent = 'Cargando experiencias...';
     experiencesGrid.appendChild(loadingMessage);
 
-    const createCard = record => {
-      const name = record?.fields?.Nombre || 'Experiencia sin nombre';
-      const description = record?.fields?.Descripcion || 'Sin descripción disponible.';
-      const imageUrl = record?.fields?.ImagenUrl?.[0]?.thumbnails?.large?.url;
-
-      const article = document.createElement('article');
-      article.className = 'experience-card';
-
-      const figure = document.createElement('figure');
-      figure.className = 'experience-card__media';
-
-      const img = document.createElement('img');
-      img.loading = 'lazy';
-      img.alt = `Imagen de ${name}`;
-      img.src = imageUrl || 'img/casaquintaclasica.jpg';
-      figure.appendChild(img);
-
-      const body = document.createElement('div');
-      body.className = 'experience-card__body';
-
-      const title = document.createElement('h3');
-      title.textContent = name;
-
-      const paragraph = document.createElement('p');
-      paragraph.textContent = description;
-
-      body.appendChild(title);
-      body.appendChild(paragraph);
-
-      const link = document.createElement('a');
-      link.className = 'btn btn--secondary';
-      link.textContent = 'Descripción';
-
-      if (record?.id) {
-        link.href = `descripcion-servicio.html?id=${encodeURIComponent(record.id)}`;
-        link.dataset.serviceId = record.id;
-        link.addEventListener('click', () => {
-          try {
-            sessionStorage.setItem('selectedExperienceId', record.id);
-          } catch (error) {
-            console.warn('No se pudo almacenar el identificador en sessionStorage.', error);
-          }
-        });
-      } else {
-        link.href = 'descripcion-servicio.html';
-      }
-
-      article.appendChild(figure);
-      article.appendChild(body);
-
-      const actions = document.createElement('div');
-      actions.className = 'experience-card__actions';
-
-      const reserveButton = document.createElement('a');
-      reserveButton.className = 'btn btn--primary';
-      reserveButton.textContent = 'Reservar';
-      reserveButton.href = 'Contacto.html';
-
-      actions.appendChild(link);
-      actions.appendChild(reserveButton);
-
-      article.appendChild(actions);
-
-      return article;
-    };
-
     const showError = message => {
       experiencesGrid.innerHTML = '';
       const error = document.createElement('p');
@@ -150,8 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
+        const createCard = window.ExperienceUtils?.createExperienceCard;
+
         records.forEach(record => {
-          experiencesGrid.appendChild(createCard(record));
+          if (typeof createCard === 'function') {
+            experiencesGrid.appendChild(createCard(record));
+          }
         });
 
         initializeExperienceSearch(experiencesGrid);

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis casas quintas favoritas | Estadía Ezeiza</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/experience-utils.js" defer></script>
+    <script src="js/favorites.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__bar">
+        <span class="site-logo">Estadía Ezeiza</span>
+        <nav class="site-menu" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="Contacto.html">Contacto</a>
+          <a href="favoritos.html" aria-current="page">Favoritos</a>
+          <a href="admin.html">Admin</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="surface experiences" id="favoritos">
+        <div class="section-heading">
+          <h1>Mis casas quintas favoritas</h1>
+          <p>Guardá tus quintas preferidas para volver a consultarlas cuando quieras.</p>
+        </div>
+        <div class="experiences__grid" data-favorites-grid></div>
+        <p class="experiences__status" data-favorites-status hidden></p>
+      </section>
+    </main>
+  </body>
+</html>
