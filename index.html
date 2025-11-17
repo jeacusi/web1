@@ -13,6 +13,12 @@
    <header class="site-header">
   <div class="site-header__bar">
     <span class="site-logo">Estadía Ezeiza</span>
+    <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+      <span class="sr-only">Abrir menú de navegación</span>
+      <span class="site-nav-toggle__bar"></span>
+      <span class="site-nav-toggle__bar"></span>
+      <span class="site-nav-toggle__bar"></span>
+    </button>
 
     <!-- 🔍 Campo de búsqueda con ícono de lupa -->
     <form class="nav-search" action="#" method="get">
@@ -44,7 +50,7 @@
     </form>
 
     <!-- 🔗 Menú principal -->
-    <nav class="site-menu" aria-label="Navegación principal">
+    <nav class="site-menu" id="site-navigation" aria-label="Navegación principal">
       <a href="#experiencias">Alquieres</a>
       <a href="#amenities">Servicios</a>
       <a href="Contacto.html">Contacto</a>

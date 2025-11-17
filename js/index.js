@@ -1,4 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const headerBar = document.querySelector('.site-header__bar');
+
+  if (navToggle && headerBar) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      headerBar.classList.toggle('is-nav-open', !expanded);
+    });
+
+    const desktopMediaQuery = window.matchMedia('(min-width: 701px)');
+    const handleDesktopChange = event => {
+      if (event.matches) {
+        headerBar.classList.remove('is-nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    };
+
+    if (typeof desktopMediaQuery.addEventListener === 'function') {
+      desktopMediaQuery.addEventListener('change', handleDesktopChange);
+    } else if (typeof desktopMediaQuery.addListener === 'function') {
+      desktopMediaQuery.addListener(handleDesktopChange);
+    }
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', event => {
       const id = anchor.getAttribute('href').slice(1);

@@ -57,7 +57,7 @@ const createCard = (record, onDelete) => {
 
   const descriptionLink = document.createElement('a');
   descriptionLink.className = 'btn btn--secondary';
-  descriptionLink.textContent = 'Descripción del servicio';
+  descriptionLink.textContent = 'Descripción';
   if (record?.id) {
     descriptionLink.href = `descripcion-servicio.html?id=${encodeURIComponent(record.id)}`;
     descriptionLink.dataset.serviceId = record.id;

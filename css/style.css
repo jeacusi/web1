@@ -141,6 +141,33 @@ h1 + p{font-size:1.06rem; opacity:.9}
     text-decoration: none;
 }
 
+.site-nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    padding: 6px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.site-nav-toggle:focus-visible {
+    outline: 3px solid rgba(47, 143, 117, 0.4);
+    outline-offset: 2px;
+}
+
+.site-nav-toggle__bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: var(--deep);
+    border-radius: 999px;
+}
+
+.site-nav-toggle__bar + .site-nav-toggle__bar {
+    margin-top: 4px;
+}
+
 .site-menu {
     display: flex;
     gap: 0.5rem;
@@ -148,10 +175,10 @@ h1 + p{font-size:1.06rem; opacity:.9}
 }
 
 .site-menu a {
-    color: var(--deep); 
-    text-decoration:none; 
-    font-weight:600; 
-    padding:8px 12px; 
+    color: var(--deep);
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 12px;
     border-radius:8px;
     transition: background .15s ease;
 }
@@ -1004,18 +1031,64 @@ input[type=text], input[type=email], textarea{
 /* Sección 9. Media Queries (Responsividad) */
 
 @media (max-width: 900px) {
-    /* Estilos para tablets y pantallas medianas */
-    .hero {
-        flex-direction: column-reverse; /* Cambia la dirección del layout del héroe */
-        /* ... otros ajustes ... */
+    .nav-search-input {
+        width: min(340px, 60vw);
+    }
+
+    .site-menu {
+        gap: 0.25rem;
     }
 }
 
-@media (max-width: 650px) {
-    /* Estilos para celulares */
+@media (max-width: 700px) {
+    .site-nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+    }
+
     .site-header__bar {
-        flex-direction: column; /* La barra de navegación se apila */
-        /* ... otros ajustes ... */
+        align-items: stretch;
+    }
+
+    .site-menu,
+    .nav-search {
+        display: none;
+    }
+
+    .site-header__bar.is-nav-open .site-menu,
+    .site-header__bar.is-nav-open .nav-search {
+        display: flex;
+        width: 100%;
+    }
+
+    .nav-search {
+        margin: 0;
+        padding-top: .5rem;
+    }
+
+    .nav-search-input {
+        width: 100%;
+        padding-right: 44px;
+    }
+
+    .nav-search-btn {
+        right: 10px;
+    }
+
+    .site-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid rgba(17, 72, 58, 0.15);
+        margin-top: .75rem;
+        padding-top: .75rem;
+    }
+
+    .site-menu a {
+        width: 100%;
+        padding-left: 0;
     }
 }
 /* ===== Buscador ===== */
