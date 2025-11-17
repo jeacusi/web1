@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const link = document.createElement('a');
       link.className = 'btn btn--secondary';
-      link.textContent = 'Descripción del servicio';
+      link.textContent = 'Descripción';
 
       if (record?.id) {
         link.href = `descripcion-servicio.html?id=${encodeURIComponent(record.id)}`;
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const reserveButton = document.createElement('a');
       reserveButton.className = 'btn btn--primary';
-      reserveButton.textContent = 'Reserver';
+      reserveButton.textContent = 'Reservar';
       reserveButton.href = 'Contacto.html';
 
       actions.appendChild(link);
