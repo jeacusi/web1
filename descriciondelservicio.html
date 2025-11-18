@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quinta Francisco Álvarez – Descripción del servicio</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+     <script>
+  const API_KEY = "TU_API_KEY";
+  const BASE_ID = "TU_BASE_ID";
+  const TABLE_NAME = "CasasQuintas";
+  const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
+
+  async function cargarCasa() {
+    try {
+      const response = await fetch(API_URL, {
+        headers: { Authorization: `Bearer ${API_KEY}` }
+      });
+      const data = await response.json();
+
+      // Tomamos el primer registro (podés cambiarlo)
+      const casa = data.records[0].fields;
+
+      // Mostrar los datos en la página
+      document.querySelector(".property-hero__eyebrow").textContent = "Casa Quinta destacada";
+      document.querySelector("h1").textContent = casa.Nombre;
+      document.querySelector(".property-hero__lead").textContent = casa.Descripcion;
+      document.querySelectorAll(".property-rates__price")[0].textContent = "$" + casa.PrecioLunesJueves + " por día";
+      document.querySelectorAll(".property-rates__price")[1].textContent = "$" + casa.PrecioFinDeSemana + " por día";
+      document.querySelector("img").src = casa.ImagenURL;
+    } catch (error) {
+      console.error("Error al traer los datos:", error);
+    }
+  }
+
+  cargarCasa();
+</script>
+
+
+  <body class="service-page">
+    <header class="subpage-header">
+      <div class="subpage-header__bar">
+        <a class="site-logo" href="index.html">Estadía Ezeiza</a>
+        <nav class="subpage-menu" aria-label="Navegación secundaria">
+          <a class="btn btn--ghost" href="index.html">Inicio</a>
+          <a class="btn btn--primary" href="Contacto.html">Consultar disponibilidad</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="service-main">
+      <section class="surface property-hero">
+        <div class="property-hero__copy">
+          <p class="property-hero__eyebrow">Casa quinta destacada</p>
+          <h1>Quinta Francisco Álvarez</h1>
+          <p class="property-hero__lead">
+            Un refugio moderno en la zona oeste de Buenos Aires pensado para jornadas inolvidables.
+            Descubrí cada ambiente y todas las comodidades incluidas.
+          </p>
+          <div class="property-hero__actions">
+            <a class="btn btn--primary" href="Contacto.html">Reservar fecha</a>
+            <a class="btn btn--ghost" href="#caracteristicas">Ver características</a>
+          </div>
+        </div>
+        <div class="property-hero__media">
+          <figure>
+            <img src="img/casaquintaclasica.jpg" alt="Vista exterior de la quinta Francisco Álvarez al atardecer" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="img/quinta-verde.jpg" alt="Piscina iluminada y parque de la quinta" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="surface property-meta" id="caracteristicas">
+        <div class="section-heading">
+          <h2>Características del inmueble</h2>
+          <p>Espacios amplios, luminosos y preparados para que cada visita sea única.</p>
+        </div>
+        <dl class="property-meta__grid">
+          <div>
+            <dt>Superficie total</dt>
+            <dd>450 m²</dd>
+          </div>
+          <div>
+            <dt>Superficie cubierta</dt>
+            <dd>65 m²</dd>
+          </div>
+          <div>
+            <dt>Ambientes</dt>
+            <dd>1</dd>
+          </div>
+          <div>
+            <dt>Baños</dt>
+            <dd>1 completo</dd>
+          </div>
+          <div>
+            <dt>Check-in</dt>
+            <dd>09:00</dd>
+          </div>
+          <div>
+            <dt>Check-out</dt>
+            <dd>19:00</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="surface property-highlights">
+        <div class="property-columns">
+          <article class="property-card">
+            <h3>Ambientes</h3>
+            <ul>
+              <li>Toilette</li>
+              <li>Comedor</li>
+              <li>Living</li>
+              <li>Patio y jardín</li>
+              <li>Cocina totalmente equipada</li>
+            </ul>
+          </article>
+          <article class="property-card">
+            <h3>Comodidades y equipamiento</h3>
+            <ul>
+              <li>Quincho cerrado de 40 m² con patio semi cubierto</li>
+              <li>Parrilla de 1,80 m con fogonero</li>
+              <li>Heladera, horno, anafe, microondas, cafetera y pava eléctrica</li>
+              <li>Living con sillón, camastro y Smart TV con Wi-Fi</li>
+              <li>Aire acondicionado frío/calor y baño completo con ducha</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="surface property-description">
+        <div class="property-description__content">
+          <h2>Descripción</h2>
+          <p>
+            Ubicada en **Ezeiza, sobre la calle José María Paz 1842, entre French y Las Heras**, esta quinta
+           se convierte en el escenario perfecto para desconectar de la ciudad sin alejarse demasiado.
+           A solo 15 minutos del Aeropuerto Internacional y con fácil acceso desde la Autopista Riccheri,
+           combina tranquilidad, confort y cercanía a la naturaleza.
+          </p>
+          <p>
+            Sus amplios 375 m² de parque incluyen una piscina de 8 x 4 metros con playa húmeda incorporada,
+            solárium y mobiliario exterior para relajarse. El quincho cerrado invita a compartir asados y
+            celebraciones en cualquier estación, mientras que el interior climatizado asegura confort total
+           durante toda la jornada. Cada detalle fue pensado para que familias y grupos de amigos disfruten
+            de encuentros memorables en un entorno seguro, natural y cuidadosamente diseñado.
+          </p>
+        </div>
+      </section>
+
+      <section class="surface property-rates">
+        <div class="section-heading">
+          <h2>Tarifas y disponibilidad</h2>
+          <p>Temporada de noviembre a marzo. Alquiler diario sin pernocte.</p>
+        </div>
+        <div class="property-rates__grid">
+          <article>
+            <h3>Lunes a jueves</h3>
+            <p class="property-rates__price">$200.000 por día</p>
+            <p>Incluye uso de instalaciones para hasta 20 personas.</p>
+          </article>
+          <article>
+            <h3>Viernes, sábados, domingos y feriados</h3>
+            <p class="property-rates__price">$250.000 por día</p>
+            <p>Incluye mesas, sillas y vajilla completas.</p>
+          </article>
+        </div>
+        <div class="property-rates__notes">
+          <ul>
+            <li>Capacidad máxima: 40 personas. Consultar por adicionales.</li>
+            <li>Depósito de garantía del 30% reembolsable tras verificar el estado del inmueble.</li>
+            <li>Pago total al ingresar. No se realizan devoluciones por mal clima.</li>
+          </ul>
+        </div>
+        <div class="property-rates__cta">
+          <a class="btn btn--primary" href="Contacto.html">Solicitar cotización personalizada</a>
+          <a class="btn btn--ghost" href="index.html">Volver al sitio principal</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="subpage-footer">
+      <p>© 2024 Estadía Ezeiza · Atención personalizada para tus eventos.</p>
+    </footer>
+  </body>
+</html>

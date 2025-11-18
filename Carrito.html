@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - Estadía Ezeiza</title>
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Ícono -->
+  <link rel="icon" href="img/icono.png" type="image/png">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="site-header__bar">
+    <a href="index.html" class="site-logo">Estadía Ezeiza</a>
+    <nav class="site-menu">
+      <a href="index.html">Inicio</a>
+      <a href="descripcion-servicio.html">Servicios</a>
+      <a href="Contacto.html">Contacto</a>
+      <a class="site-menu__cta" href="Carrito.html">🛒 Carrito</a>
+    </nav>
+  </header>
+
+  <!-- ===== SECCIÓN PRINCIPAL ===== -->
+  <main class="surface cart-hero">
+    <div class="cart-hero__content">
+      <h1>🛒 Tu Carrito de Reservas</h1>
+      <p class="cart-hero__lead">
+        Aquí verás las casas quintas que seleccionaste.  
+        Podés eliminar alguna, vaciar el carrito o continuar con la reserva.
+      </p>
+    </div>
+
+    <!-- Contenedor de ítems -->
+    <div class="cart-grid">
+      <div id="lista-carrito" class="cart-card">
+        <p>Cargando tu carrito...</p>
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="cart-hero__actions">
+      <button class="btn btn--secondary" onclick="vaciarCarrito()">🗑 Vaciar carrito</button>
+      <a href="index.html" class="btn btn--ghost">⬅️ Seguir explorando</a>
+    </div>
+
+    <!-- Total -->
+    <div id="total-carrito" style="text-align:center; font-weight:600; font-size:1.2rem; margin-top:1rem;">
+      <!-- Aquí se mostrará el total -->
+    </div>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Estadía Ezeiza. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Script del carrito -->
+  <script src="js/carrito.js" defer></script>
+</body>
+</html>
