@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="evening" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfd9ff" />
+      <stop offset="100%" stop-color="#e2f0ff" />
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f8e2b5" />
+      <stop offset="100%" stop-color="#f0c987" />
+    </linearGradient>
+    <linearGradient id="trees" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4caf50" />
+      <stop offset="100%" stop-color="#2e7d32" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="520" fill="url(#evening)" />
+  <rect y="520" width="1600" height="380" fill="#8bc34a" />
+  <g fill="url(#trees)">
+    <ellipse cx="200" cy="520" rx="180" ry="260" />
+    <ellipse cx="420" cy="520" rx="160" ry="240" />
+    <ellipse cx="1360" cy="520" rx="180" ry="260" />
+    <ellipse cx="1160" cy="520" rx="160" ry="240" />
+  </g>
+  <g transform="translate(260 420)">
+    <rect x="0" y="0" width="1080" height="320" rx="28" fill="url(#sand)" />
+    <rect x="80" y="30" width="920" height="260" rx="22" fill="rgba(255, 255, 255, 0.55)" />
+  </g>
+  <g transform="translate(300 460)" stroke="#263238" stroke-width="10" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="220" />
+    <line x1="1000" y1="0" x2="1000" y2="220" />
+    <line x1="0" y1="60" x2="1000" y2="60" />
+    <line x1="0" y1="140" x2="1000" y2="140" />
+  </g>
+  <g transform="translate(420 480)">
+    <circle cx="300" cy="-60" r="42" fill="#ff7043" />
+    <path d="M180 180c0-60 40-100 100-100s100 40 100 100" fill="none" stroke="#ff7043" stroke-width="20" stroke-linecap="round" />
+    <path d="M540 180c0-60-40-100-100-100s-100 40-100 100" fill="none" stroke="#ff7043" stroke-width="20" stroke-linecap="round" />
+  </g>
+  <g transform="translate(340 500)">
+    <circle cx="80" cy="140" r="70" fill="#fdd835" opacity="0.9" />
+    <rect x="46" y="60" width="68" height="120" rx="24" fill="#f9a825" />
+  </g>
+  <g transform="translate(1130 500)">
+    <circle cx="80" cy="140" r="70" fill="#29b6f6" opacity="0.9" />
+    <rect x="46" y="60" width="68" height="120" rx="24" fill="#0288d1" />
+  </g>
+</svg>

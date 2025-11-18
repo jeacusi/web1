@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6ec3ff" />
+      <stop offset="100%" stop-color="#9fe7ff" />
+    </linearGradient>
+    <linearGradient id="pool" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4fd1c5" />
+      <stop offset="100%" stop-color="#2c7a7b" />
+    </linearGradient>
+    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7bd389" />
+      <stop offset="100%" stop-color="#4ca86b" />
+    </linearGradient>
+    <linearGradient id="house" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f6f6f6" />
+      <stop offset="100%" stop-color="#dadada" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="540" fill="url(#sky)" />
+  <rect y="540" width="1600" height="360" fill="url(#lawn)" />
+  <g transform="translate(460 220)">
+    <rect width="680" height="280" rx="18" fill="url(#house)" />
+    <rect x="40" y="40" width="600" height="120" fill="#cfd8dc" rx="12" />
+    <rect x="520" y="40" width="80" height="120" fill="#90a4ae" rx="10" />
+    <rect x="360" y="180" width="120" height="70" fill="#90a4ae" rx="12" />
+    <rect x="160" y="180" width="160" height="70" fill="#b0bec5" rx="12" />
+    <rect x="60" y="40" width="140" height="120" fill="#ffe082" rx="12" />
+  </g>
+  <g transform="translate(340 540)">
+    <rect width="920" height="220" rx="40" fill="url(#pool)" />
+    <rect x="60" y="40" width="800" height="140" rx="32" fill="rgba(255, 255, 255, 0.2)" />
+    <path d="M60 110h800" stroke="rgba(255,255,255,0.45)" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <g fill="#ffffff" opacity="0.35">
+    <circle cx="1220" cy="420" r="40" />
+    <circle cx="1310" cy="440" r="28" />
+    <circle cx="1260" cy="360" r="36" />
+  </g>
+  <g transform="translate(220 520)">
+    <rect x="0" y="0" width="120" height="200" rx="20" fill="#3d6c4f" />
+    <polygon points="60,-120 140,0 -20,0" fill="#2f5b41" />
+  </g>
+  <g transform="translate(1260 500)">
+    <rect x="0" y="0" width="120" height="220" rx="20" fill="#35664a" />
+    <polygon points="60,-130 150,0 -30,0" fill="#2b553c" />
+  </g>
+</svg>
